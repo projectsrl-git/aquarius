@@ -1,0 +1,34 @@
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[U_LEG_DD]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[U_LEG_DD]
+GO
+ 
+CREATE TABLE [dbo].[U_LEG_DD] (
+	[id_unique]  uniqueidentifier ROWGUIDCOL  NOT NULL ,
+	[LEG_AGGANC] [varchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[LEG_CODSYS] [varchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[LEG_CODART] [varchar] (16) COLLATE Latin1_General_CI_AS NULL ,
+	[LEG_CODFOR] [varchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[LEG_TIPDOC] [varchar] (3) COLLATE Latin1_General_CI_AS NULL ,
+	[LEG_PREZZO] [numeric] (19,6) NULL ,
+	[LEG_QUANTI] [numeric] (17,3) NULL 
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[U_LEG_DD] WITH NOCHECK ADD 
+	CONSTRAINT [PK_U_LEG_DD] PRIMARY KEY  CLUSTERED 
+	(
+		[id_unique]
+	)  ON [PRIMARY] 
+GO
+
+ALTER TABLE [dbo].[U_LEG_DD] WITH NOCHECK ADD 
+	CONSTRAINT [DF_U_LEG_DD_id_unique] DEFAULT (newid()) FOR [id_unique],
+	CONSTRAINT [DF_U_LEG_DD_LEG_AGGANC] DEFAULT ('') FOR [LEG_AGGANC],
+	CONSTRAINT [DF_U_LEG_DD_LEG_CODSYS] DEFAULT ('') FOR [LEG_CODSYS],
+	CONSTRAINT [DF_U_LEG_DD_LEG_CODART] DEFAULT ('') FOR [LEG_CODART],
+	CONSTRAINT [DF_U_LEG_DD_LEG_CODFOR] DEFAULT ('') FOR [LEG_CODFOR],
+	CONSTRAINT [DF_U_LEG_DD_LEG_TIPDOC] DEFAULT ('') FOR [LEG_TIPDOC],
+	CONSTRAINT [DF_U_LEG_DD_LEG_PREZZO] DEFAULT (0) FOR [LEG_PREZZO],
+	CONSTRAINT [DF_U_LEG_DD_LEG_QUANTI] DEFAULT (0) FOR [LEG_QUANTI]
+GO
+

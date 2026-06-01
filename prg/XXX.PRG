@@ -1,0 +1,27 @@
+IF !ZTB.ININSERIMENTO       &&  CARICA  DETTAGLIO COMPONENTI
+
+   *   ZAP CURSORE
+   SELECT CU_VENDITE_CO
+   ZAP
+   x_aggan = "daggancio = '" + XAGGA + "'"
+   cSql="SELECT * FROM VENDITE_CO WHERE " + x_aggan
+   IF !ExecCommand(cSql,"VENDITE_CO")
+      return(.f.)
+   ENDIF 
+   SELECT VENDITE_CO
+   IF !EOF()
+   
+		SCATTER MEMVAR MEMO	    && SALVA I VECCHI VALORI
+ 	  	SELECT CU_VENDITE_CO
+	  	APPEND BLANK
+	  	GATHER MEMVAR MEMO		&& SALVA LE MODIFICHE
+
+
+   ENDIF
+   
+   
+ENDIF   
+
+SELECT CU_VENDITE_CO
+SET ORDER TO I_CONTR
+GO TOP        

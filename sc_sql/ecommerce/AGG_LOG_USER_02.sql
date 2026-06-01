@@ -1,0 +1,7 @@
+  
+
+ALTER TABLE [dbo].[LOG_UTENTI] ALTER COLUMN
+	OPERATORE varchar(50) COLLATE Latin1_General_CI_AS NULL
+GO
+
+

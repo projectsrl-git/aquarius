@@ -1,0 +1,11 @@
+UPDATE U_CLI_AN SET 
+cli_nazion = (SELECT BAN_NAZION FROM U_BAN_AN WHERE BAN_CODBAN = U_CLI_AN.cli_bae),
+cli_codche = (SELECT ban_checkd FROM U_BAN_AN WHERE BAN_CODBAN = U_CLI_AN.cli_bae),
+cli_codcin = (SELECT ban_CIN FROM U_BAN_AN WHERE BAN_CODBAN = U_CLI_AN.cli_bae),
+cli_codabi = (SELECT ban_CODABI FROM U_BAN_AN WHERE BAN_CODBAN = U_CLI_AN.cli_bae),
+cli_codcab = (SELECT ban_CODCAB FROM U_BAN_AN WHERE BAN_CODBAN = U_CLI_AN.cli_bae),
+cli_numcc = (SELECT BAN_CODNCC FROM U_BAN_AN WHERE BAN_CODBAN = U_CLI_AN.cli_bae),
+cli_cdiban = (SELECT ban_iban FROM U_BAN_AN WHERE BAN_CODBAN = U_CLI_AN.cli_bae)
+WHERE 
+CLI_BAE<>'' AND
+U_CLI_AN.cli_bae IN (SELECT BAN_CODBAN FROM U_BAN_AN)

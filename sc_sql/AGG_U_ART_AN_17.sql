@@ -1,0 +1,4 @@
+
+ALTER TABLE [dbo].[U_ART_AN] ADD 
+	ART_DSADOG bit not NULL DEFAULT (0)
+go

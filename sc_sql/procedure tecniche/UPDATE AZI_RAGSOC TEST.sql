@@ -1,0 +1,2 @@
+
+--UPDATE U_AZI_AN SET AZI_RAGSOC = '### ' + RTRIM(AZI_RAGSOC) + ' TEST ###'

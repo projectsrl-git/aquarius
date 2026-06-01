@@ -1,0 +1,153 @@
+
+/********************************************************
+ AGGIORNAMENTO PARAMETRI AZIENDALI 
+ ********************************************************/
+UPDATE U_AZI_AN SET 
+AZI_CODM = 'SEDE',
+AZI_DECQTA = 2, 
+AZI_DECPRZ = 6, 
+AZI_DECVAL = 2,
+AZI_IVA = '22',
+AZI_UM = 'NR',
+AZI_LINEA = '3',
+AZI_CTRGIA = 1,
+AZI_SAU = 1,
+AZI_BOLFOR = 1,
+AZI_MAGLOG = 1,
+AZI_CARORF = 'SEDE',
+AZI_CQUMPC = 'WIP',
+AZI_CQUMPN = 'WIP',
+AZI_CQUSLC = 'WIP',
+AZI_CQUSLN = 'WIP',
+AZI_SPAPRO = '',
+AZI_SPAMPR = '',
+AZI_SPACQS = '',
+AZI_RIBPRO = '',
+AZI_RIBSLR = '',
+AZI_RIBSLO = '',
+AZI_TAGPRO = '',
+AZI_TAGSLR = '',
+AZI_TAGPFO = '',
+azi_lis0A = 1,
+azi_lis01 = 0,
+azi_lis02 = 0,
+azi_lis03 = 0,
+azi_lis04 = 1,
+azi_lis05 = 0,
+azi_lis09 = 0,
+azi_lis06 = 0,
+azi_lis07 = 0,
+azi_lis08 = 1,
+azi_lis10 = 0,
+azi_bolla = '001',
+azi_fapro = 'FAP',
+azi_ordin = 'ORD',
+azi_fattu = 'VEN',
+azi_orfo = 'ORF',
+azi_bfo = 'BFO',
+azi_val01 = 'DM',
+azi_val02 = 'DO',
+azi_val03 = 'DOL',
+azi_val04 = 'EUR',
+azi_val05 = 'FRA',
+azi_val06 = 'LIT',
+azi_val07 = 'RMB',
+azi_val08 = 'SCE',
+azi_val09 = 'STE',
+azi_val10 = 'ITL',
+azi_val11 = '',
+azi_val12 = '',
+azi_val13 = '',
+azi_val14 = ''
+
+
+SELECT * FROM U_AZI_AN
+
+
+UPDATE U_AZI_PA SET 
+AZI_CDAPRD = 0,
+AZI_CGMAGA = 1,
+AZI_MAGNO0 = 'CANCELLA_GIACENZE_A_ZERO',
+AZI_SAUFOR = 1,
+AZI_GIANEG = 1,
+AZI_SPASCA = '',
+AZI_PRESSA = '',
+AZI_LEVIGA1 = '',
+AZI_LEVIGA2 = '',
+AZI_LEVIGA3 = '',
+AZI_NOBILI = '',
+AZI_SCAPPT = '',
+AZI_CAIPPT = '',
+AZI_MACINA = '',
+AZI_TAGLIO = '',
+AZI_PROFIN = '',
+AZI_CAUMOV = 'RE+',
+azi_cauvba = 'RE-',
+AZI_CAPPDMPREL = 'CWP',
+AZI_SCPPDMPREL = 'PRE',
+AZI_CAPPDMVERS = 'CAP',
+AZI_SCPPDMVERS = 'SCM',
+AZI_PDMLINPF = '1',
+AZI_PDMLINSL = '2',
+AZI_MAGPDMPREL = 'WIP',
+AZI_MAGPDMVERS = 'MPF',
+azi_lis11 = 0,
+azi_lis12 = 0,
+azi_lis13 = 0,
+azi_lis14 = 0,
+azi_carfor = 0,
+azi_lifsco = 0,
+AZI_FLGPCO = 0,
+AZI_OASFAT = 1
+
+SELECT * FROM U_AZI_PA
+
+
+/********************************************************
+ AGGIORNAMENTO DATE DI DEFAULT PER OPERATORI
+ ********************************************************/
+UPDATE RES_OPER SET 
+	RES_FATDAL= '',
+	RES_FATAL= '',
+	RES_FATDTR= '',
+	RES_RICDAL= '',
+	RES_RICAL= '',
+	RES_RICDTR= '',
+	RES_dtprvda= '',
+	RES_dtprva= '',
+	RES_dtelab= '',
+	RES_bildal= '',
+	RES_bilal= '',
+	RES_bolldal= '',
+	RES_bollal= '',
+	RES_bolldtr= '',
+	RES_riadal= '',
+	RES_riaal= '',
+	RES_riadtr= '',
+	RES_incdal= '',
+	RES_incal= '',
+	RES_incdtr= '',
+	RES_ammdal= '',
+	RES_ammal= '',
+	RES_ammdtr= '',
+	RES_orddal= '',
+	RES_ordal= '',
+	RES_prodal= '',
+	RES_proal= '',
+	RES_dtmagda= '',
+	RES_dtmagal= '',
+	RES_dtrisda= '',
+	RES_dtrisal= '',
+	RES_dtrdcda= '',
+	RES_dtrdcal= '',
+	RES_dtstpda= '',
+	RES_dtstpal= '',
+	RES_dtrdada= '',
+	RES_dtrdaal= ''
+
+
+/********************************************************
+ AGGIORNAMENTO PARAMETRO IMPORTO MAX EURO GESTIBILE
+ ********************************************************/
+UPDATE PARA SET LIBERA = '1000000000,00' WHERE CODICE = 'TEUEUR'
+SELECT * FROM PARA WHERE CODICE = 'TEUEUR'

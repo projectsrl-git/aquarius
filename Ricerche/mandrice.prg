@@ -1,0 +1,32 @@
+PARAMETERS V_SEEK
+
+x_soci = "ric_codsoc = '" + PUB_CODSOC + "'"
+x_anno = "ord_anno = '" + PUB_ANNO + "'"
+x_cond = x_soci
+IF DOC_ANNO
+   x_cond = x_cond + " and " + x_anno
+ENDIF
+
+DO CASE
+
+   CASE V_SCELTA=1          				&& ACCESSO PER NUMERO
+        IF PUB_VISRIC 
+           IF EMPTY(V_SEEK) .OR. SUBSTR(V_SEEK,1,5) = SPACE(05)
+           ELSE
+              x_nor6   = 6
+              x_nor0   = TRC(x_nor6,ALLTRIM(V_SEEK))
+              x_nord   = "ric_progr = '" + x_nor0 + "'"
+              x_cond   = x_cond + " and " + x_nord
+           ENDIF
+           _ii_cSql = "select * from u_man_tt where " + x_cond + ;
+                                                    " order by ric_codsoc,ric_progr,ord_anno" 
+        ELSE
+           x_nor6   = 6
+           x_nor0   = TRC(x_nor6,ALLTRIM(V_SEEK))
+           x_nord   = "ric_progr = '" + x_nor0 + "'"
+           x_cond   = x_cond + " and " + x_nord
+        ENDIF
+        _ii_cSql = "select * from u_man_tt where " + x_cond + ;
+                                                 " order by ric_codsoc,ric_progr,ord_anno" 
+
+ENDCASE

@@ -1,0 +1,247 @@
+       294          00010BAGN.CAZZAMALI/1    SANT'ANDREA                                                                     THERMO                                  
+       294          00010BAGN.CAZZAMALI/1    SANT'ANDREA                                                                     THERMO                                  
+       294          00020BAGN.CAZZAMALI/1                                                                                                                            
+       294          00020BAGN.CAZZAMALI/1                                                                                                                            
+       295          00010BAGN.CAZZAMALI/2    GRUPPO IMAR                                                                     TEPOR                                   
+       295          00010BAGN.CAZZAMALI/2    GRUPPO IMAR                                                                     TEPOR                                   
+       295          00020BAGN.CAZZAMALI/2    GRUPPO IMAR                                                                     TEMPOR                                  
+       295          00020BAGN.CAZZAMALI/2    GRUPPO IMAR                                                                     TEMPOR                                  
+       505          00010INZA.C.S.GIUSEPPE/B SANT'ANDREA                                                                     MILLENNIUM65RK                          
+       505          00010INZA.C.S.GIUSEPPE/B SANT'ANDREA                                                                     MILLENNIUM65RK                          
+       505          00010INZA.C.S.GIUSEPPE/B SANT'ANDREA                                                                     MILLENNIUM65RK                          
+       505          00010INZA.C.S.GIUSEPPE/B SANT'ANDREA                                                                     MILLENNIUM65RK                          
+       505          00020INZA.C.S.GIUSEPPE/B SANT'ANDREA                                                                     MILLENNIUMRK65                          
+       505          00020INZA.C.S.GIUSEPPE/B SANT'ANDREA                                                                     MILLENNIUMRK65                          
+       505          00020INZA.C.S.GIUSEPPE/B SANT'ANDREA                                                                     MILLENNIUMRK65                          
+       505          00020INZA.C.S.GIUSEPPE/B SANT'ANDREA                                                                     MILLENNIUMRK65                          
+       505          00030INZA.C.S.GIUSEPPE/B SANT'ANDREA                                                                     MILLENNIUMRK65                          
+       505          00030INZA.C.S.GIUSEPPE/B SANT'ANDREA                                                                     MILLENNIUMRK65                          
+       505          00030INZA.C.S.GIUSEPPE/B SANT'ANDREA                                                                     MILLENNIUMRK65                          
+       505          00030INZA.C.S.GIUSEPPE/B SANT'ANDREA                                                                     MILLENNIUMRK65                          
+       505          00040INZA.C.S.GIUSEPPE/B SANT'ANDREA                                                                     MILLENNIURK65                           
+       505          00040INZA.C.S.GIUSEPPE/B SANT'ANDREA                                                                     MILLENNIURK65                           
+       505          00040INZA.C.S.GIUSEPPE/B SANT'ANDREA                                                                     MILLENNIURK65                           
+       505          00040INZA.C.S.GIUSEPPE/B SANT'ANDREA                                                                     MILLENNIURK65                           
+       585          00010MELZ.CASA S.G./1    BERETTA                                                                         CALDAIA PRINCIPALE                      
+       585          00010MELZ.CASA S.G./1    BERETTA                                                                         CALDAIA PRINCIPALE                      
+       585          00010MELZ.CASA S.G./1    BERETTA                                                                         CALDAIA PRINCIPALE                      
+       585          00020MELZ.CASA S.G./1    BERETTA                                                                         1°MODULO                                
+       585          00020MELZ.CASA S.G./1    BERETTA                                                                         1°MODULO                                
+       585          00020MELZ.CASA S.G./1    BERETTA                                                                         1°MODULO                                
+       585          00030MELZ.CASA S.G./1    BERETTA                                                                         2°MODULO                                
+       585          00030MELZ.CASA S.G./1    BERETTA                                                                         2°MODULO                                
+       585          00030MELZ.CASA S.G./1    BERETTA                                                                         2°MODULO                                
+       614          00010CASSD.GUAITANI      SIME                                                                            SIME                                    
+       614          00010CASSD.GUAITANI      SIME                                                                            SIME                                    
+       614          00020CASSD.GUAITANI      SIME                                                                            SIME                                    
+       614          00020CASSD.GUAITANI      SIME                                                                            SIME                                    
+      3953          00010TREV.CASE COMUNALI/2BALTUR                                                                          SPARGAS                                 
+      3953          00010TREV.CASE COMUNALI/2BALTUR                                                                          SPARGAS                                 
+      3953          00020TREV.CASE COMUNALI/2VIESSMANN                                                                       VIESSMANN                               
+      3953          00020TREV.CASE COMUNALI/2VIESSMANN                                                                       VIESSMANN                               
+      4101          00010TREV.CASE COMUNALI/4GEMINOX                                                                         GEMINOX                                 
+      4101          00010TREV.CASE COMUNALI/4GEMINOX                                                                         GEMINOX                                 
+      4101          00010TREV.CASE COMUNALI/4GEMINOX                                                                         GEMINOX                                 
+      4101          00020TREV.CASE COMUNALI/4GEMINOX                                                                         GEMINOX                                 
+      4101          00020TREV.CASE COMUNALI/4GEMINOX                                                                         GEMINOX                                 
+      4101          00020TREV.CASE COMUNALI/4GEMINOX                                                                         GEMINOX                                 
+      4101          00030TREV.CASE COMUNALI/4GEMINOX                                                                         GEMINOX                                 
+      4101          00030TREV.CASE COMUNALI/4GEMINOX                                                                         GEMINOX                                 
+      4101          00030TREV.CASE COMUNALI/4GEMINOX                                                                         GEMINOX                                 
+      5159          00010STEZ.MAGAZZINO      ROBUR                                                                           ROBUR                                   
+      5159          00010STEZ.MAGAZZINO      ROBUR                                                                           ROBUR                                   
+      5159          00010STEZ.MAGAZZINO      ROBUR                                                                           ROBUR                                   
+      5159          00020STEZ.MAGAZZINO      ROBUR                                                                           ROBUR                                   
+      5159          00020STEZ.MAGAZZINO      ROBUR                                                                           ROBUR                                   
+      5159          00020STEZ.MAGAZZINO      ROBUR                                                                           ROBUR                                   
+      5159          00030STEZ.MAGAZZINO      ROBUR                                                                           ROBUR                                   
+      5159          00030STEZ.MAGAZZINO      ROBUR                                                                           ROBUR                                   
+      5159          00030STEZ.MAGAZZINO      ROBUR                                                                           ROBUR                                   
+      6007          00010CARA.C.TOFFETTI     IMMERGAS                                                                        IMMERGAS                                
+      6007          00010CARA.C.TOFFETTI     IMMERGAS                                                                        IMMERGAS                                
+      6007          00020CARA.C.TOFFETTI     IMMERGAS                                                                        IMMERGAS                                
+      6007          00020CARA.C.TOFFETTI     IMMERGAS                                                                        IMMERGAS                                
+      6966          00010CREM.C.RESIDENCE    SANT'ANDREA                                                                     KB40G                                   
+      6966          00010CREM.C.RESIDENCE    SANT'ANDREA                                                                     KB40G                                   
+      6966          00010CREM.C.RESIDENCE    SANT'ANDREA                                                                     KB40G                                   
+      6966          00020CREM.C.RESIDENCE    SANT'ANDREA                                                                     OSA70 2G                                
+      6966          00020CREM.C.RESIDENCE    SANT'ANDREA                                                                     OSA70 2G                                
+      6966          00020CREM.C.RESIDENCE    SANT'ANDREA                                                                     OSA70 2G                                
+      6966          00030CREM.C.RESIDENCE    SANT'ANDREA                                                                     OSA70 2G                                
+      6966          00030CREM.C.RESIDENCE    SANT'ANDREA                                                                     OSA70 2G                                
+      6966          00030CREM.C.RESIDENCE    SANT'ANDREA                                                                     OSA70 2G                                
+      7025          00010TREV.C.REVELLINO    ECOFLAM                                                                         ECOFLAM                                 
+      7025          00010TREV.C.REVELLINO    ECOFLAM                                                                         ECOFLAM                                 
+      7025          00010TREV.C.REVELLINO    ECOFLAM                                                                         ECOFLAM                                 
+      7025          00010TREV.C.REVELLINO    ECOFLAM                                                                         ECOFLAM                                 
+      7025          00020TREV.C.REVELLINO    ECOFLAM                                                                         ECOFLAM                                 
+      7025          00020TREV.C.REVELLINO    ECOFLAM                                                                         ECOFLAM                                 
+      7025          00020TREV.C.REVELLINO    ECOFLAM                                                                         ECOFLAM                                 
+      7025          00020TREV.C.REVELLINO    ECOFLAM                                                                         ECOFLAM                                 
+      7025          00030TREV.C.REVELLINO    ECOFLAM                                                                         ECOFLAM                                 
+      7025          00030TREV.C.REVELLINO    ECOFLAM                                                                         ECOFLAM                                 
+      7025          00030TREV.C.REVELLINO    ECOFLAM                                                                         ECOFLAM                                 
+      7025          00030TREV.C.REVELLINO    ECOFLAM                                                                         ECOFLAM                                 
+      7025          00040TREV.C.REVELLINO    ECOFLAM                                                                         ECOFLAM                                 
+      7025          00040TREV.C.REVELLINO    ECOFLAM                                                                         ECOFLAM                                 
+      7025          00040TREV.C.REVELLINO    ECOFLAM                                                                         ECOFLAM                                 
+      7025          00040TREV.C.REVELLINO    ECOFLAM                                                                         ECOFLAM                                 
+      7050          00010GORG.SUORE          RIELLO                                                                          RBL RS 50                               
+      7050          00010GORG.SUORE          RIELLO                                                                          RBL RS 50                               
+      7050          00010GORG.SUORE          RIELLO                                                                          RBL RS 50                               
+      7050          00020GORG.SUORE          RIELLO                                                                          RBL RS 50                               
+      7050          00020GORG.SUORE          RIELLO                                                                          RBL RS 50                               
+      7050          00020GORG.SUORE          RIELLO                                                                          RBL RS 50                               
+      7050          00030GORG.SUORE          RIELLO                                                                          RBL RS 50                               
+      7050          00030GORG.SUORE          RIELLO                                                                          RBL RS 50                               
+      7050          00030GORG.SUORE          RIELLO                                                                          RBL RS 50                               
+      7054          00010FARAO.BRE-BE-MI     SANT'ANDREA                                                                     SANT'ANDREA                             
+      7054          00010FARAO.BRE-BE-MI     SANT'ANDREA                                                                     SANT'ANDREA                             
+      7054          00020FARAO.BRE-BE-MI     SANT'ANDREA                                                                     SANT'ANDREA                             
+      7054          00020FARAO.BRE-BE-MI     SANT'ANDREA                                                                     SANT'ANDREA                             
+      7055          00010CISE.FARMACIA       ROBUR                                                                           ROBUR                                   
+      7055          00010CISE.FARMACIA       ROBUR                                                                           ROBUR                                   
+      7055          00010CISE.FARMACIA       ROBUR                                                                           ROBUR                                   
+      7055          00010CISE.FARMACIA       ROBUR                                                                           ROBUR                                   
+      7055          00020CISE.FARMACIA       ROBUR                                                                           ROBUR                                   
+      7055          00020CISE.FARMACIA       ROBUR                                                                           ROBUR                                   
+      7055          00020CISE.FARMACIA       ROBUR                                                                           ROBUR                                   
+      7055          00020CISE.FARMACIA       ROBUR                                                                           ROBUR                                   
+      7055          00030CISE.FARMACIA       ROBUR                                                                           ROBUR                                   
+      7055          00030CISE.FARMACIA       ROBUR                                                                           ROBUR                                   
+      7055          00030CISE.FARMACIA       ROBUR                                                                           ROBUR                                   
+      7055          00030CISE.FARMACIA       ROBUR                                                                           ROBUR                                   
+      7055          00040CISE.FARMACIA       ROBUR                                                                           ROBUR                                   
+      7055          00040CISE.FARMACIA       ROBUR                                                                           ROBUR                                   
+      7055          00040CISE.FARMACIA       ROBUR                                                                           ROBUR                                   
+      7055          00040CISE.FARMACIA       ROBUR                                                                           ROBUR                                   
+      7096          00010VIMO.C.LEONARDO     RIELLO                                                                          RIELLO                                  
+      7096          00010VIMO.C.LEONARDO     RIELLO                                                                          RIELLO                                  
+      7096          00020VIMO.C.LEONARDO     RIELLO                                                                          RIELLO                                  
+      7096          00020VIMO.C.LEONARDO     RIELLO                                                                          RIELLO                                  
+      7126          00010VARE.OVIESSE        CARBOFUEL                                                                       CARBOFUEL                               
+      7126          00010VARE.OVIESSE        CARBOFUEL                                                                       CARBOFUEL                               
+      7126          00010VARE.OVIESSE        CARBOFUEL                                                                       CARBOFUEL                               
+      7126          00020VARE.OVIESSE        CARBOFUEL                                                                       CARBOFUEL                               
+      7126          00020VARE.OVIESSE        CARBOFUEL                                                                       CARBOFUEL                               
+      7126          00020VARE.OVIESSE        CARBOFUEL                                                                       CARBOFUEL                               
+      7126          00030VARE.OVIESSE        CARBOFUEL                                                                       CARBOFUEL                               
+      7126          00030VARE.OVIESSE        CARBOFUEL                                                                       CARBOFUEL                               
+      7126          00030VARE.OVIESSE        CARBOFUEL                                                                       CARBOFUEL                               
+      7163          00010TREV.MP ITALIA      SANT'ANDREA                                                                     JASHA 9 HI                              
+      7163          00010TREV.MP ITALIA      SANT'ANDREA                                                                     JASHA 9 HI                              
+      7163          00010TREV.MP ITALIA      SANT'ANDREA                                                                     JASHA 9 HI                              
+      7163          00020TREV.MP ITALIA      SANT'ANDREA                                                                     JASHA 18 HI                             
+      7163          00020TREV.MP ITALIA      SANT'ANDREA                                                                     JASHA 18 HI                             
+      7163          00020TREV.MP ITALIA      SANT'ANDREA                                                                     JASHA 18 HI                             
+      7163          00030TREV.MP ITALIA      SANT'ANDREA                                                                     JASHA 18 HI                             
+      7163          00030TREV.MP ITALIA      SANT'ANDREA                                                                     JASHA 18 HI                             
+      7163          00030TREV.MP ITALIA      SANT'ANDREA                                                                     JASHA 18 HI                             
+      7228          00010MELZ.POSTE          BIKLIM                                                                          KM92.65TP                               
+      7228          00010MELZ.POSTE          BIKLIM                                                                          KM92.65TP                               
+      7228          00010MELZ.POSTE          BIKLIM                                                                          KM92.65TP                               
+      7228          00020MELZ.POSTE          HOVAL                                                                           HG-E 240                                
+      7228          00020MELZ.POSTE          HOVAL                                                                           HG-E 240                                
+      7228          00020MELZ.POSTE          HOVAL                                                                           HG-E 240                                
+      7228          00030MELZ.POSTE          BIKLIM                                                                          KM92.65TP                               
+      7228          00030MELZ.POSTE          BIKLIM                                                                          KM92.65TP                               
+      7228          00030MELZ.POSTE          BIKLIM                                                                          KM92.65TP                               
+      7231          00010VAPR.CASTEL BARCO/4 ROBUR                                                                           3002                                    
+      7231          00010VAPR.CASTEL BARCO/4 ROBUR                                                                           3002                                    
+      7231          00010VAPR.CASTEL BARCO/4 ROBUR                                                                           3002                                    
+      7231          00010VAPR.CASTEL BARCO/4 ROBUR                                                                           3002                                    
+      7231          00010VAPR.CASTEL BARCO/4 ROBUR                                                                           3002                                    
+      7231          00020VAPR.CASTEL BARCO/4 ROBUR                                                                           4002                                    
+      7231          00020VAPR.CASTEL BARCO/4 ROBUR                                                                           4002                                    
+      7231          00020VAPR.CASTEL BARCO/4 ROBUR                                                                           4002                                    
+      7231          00020VAPR.CASTEL BARCO/4 ROBUR                                                                           4002                                    
+      7231          00020VAPR.CASTEL BARCO/4 ROBUR                                                                           4002                                    
+      7231          00030VAPR.CASTEL BARCO/4 ROBUR                                                                           4002                                    
+      7231          00030VAPR.CASTEL BARCO/4 ROBUR                                                                           4002                                    
+      7231          00030VAPR.CASTEL BARCO/4 ROBUR                                                                           4002                                    
+      7231          00030VAPR.CASTEL BARCO/4 ROBUR                                                                           4002                                    
+      7231          00030VAPR.CASTEL BARCO/4 ROBUR                                                                           4002                                    
+      7231          00040VAPR.CASTEL BARCO/4 ROBUR                                                                           4002                                    
+      7231          00040VAPR.CASTEL BARCO/4 ROBUR                                                                           4002                                    
+      7231          00040VAPR.CASTEL BARCO/4 ROBUR                                                                           4002                                    
+      7231          00040VAPR.CASTEL BARCO/4 ROBUR                                                                           4002                                    
+      7231          00040VAPR.CASTEL BARCO/4 ROBUR                                                                           4002                                    
+      7231          00050VAPR.CASTEL BARCO/4 ROBUR                                                                           4002                                    
+      7231          00050VAPR.CASTEL BARCO/4 ROBUR                                                                           4002                                    
+      7231          00050VAPR.CASTEL BARCO/4 ROBUR                                                                           4002                                    
+      7231          00050VAPR.CASTEL BARCO/4 ROBUR                                                                           4002                                    
+      7231          00050VAPR.CASTEL BARCO/4 ROBUR                                                                           4002                                    
+      7405          00010TREV.DHILLON        FONDITAL                                                                        FONDITAL                                
+      7405          00010TREV.DHILLON        FONDITAL                                                                        FONDITAL                                
+      7405          00020TREV.DHILLON        FONDITAL                                                                        FONDITAL                                
+      7405          00020TREV.DHILLON        FONDITAL                                                                        FONDITAL                                
+      7467          00010MELZ.C.ITALIA       RIELLO                                                                          RIELLO                                  
+      7467          00010MELZ.C.ITALIA       RIELLO                                                                          RIELLO                                  
+      7467          00010MELZ.C.ITALIA       RIELLO                                                                          RIELLO                                  
+      7467          00020MELZ.C.ITALIA       RIELLO                                                                          RIELLO                                  
+      7467          00020MELZ.C.ITALIA       RIELLO                                                                          RIELLO                                  
+      7467          00020MELZ.C.ITALIA       RIELLO                                                                          RIELLO                                  
+      7467          00030MELZ.C.ITALIA       RIELLO                                                                          RIELLO                                  
+      7467          00030MELZ.C.ITALIA       RIELLO                                                                          RIELLO                                  
+      7467          00030MELZ.C.ITALIA       RIELLO                                                                          RIELLO                                  
+      7892          00010PESC.C.FARAONE      VIESSMANN                                                                       VIESSMANN                               
+      7892          00010PESC.C.FARAONE      VIESSMANN                                                                       VIESSMANN                               
+      7892          00020PESC.C.FARAONE      TELERISCALDAMENTO                                                               TELERISCADAMENTO                        
+      7892          00020PESC.C.FARAONE      TELERISCALDAMENTO                                                               TELERISCADAMENTO                        
+      8042          00010CERN.C.CENTRO COMM/1GRUPPO FRIGO                                                                    GRUPPO FRIGO                            
+      8042          00010CERN.C.CENTRO COMM/1GRUPPO FRIGO                                                                    GRUPPO FRIGO                            
+      8042          00020CERN.C.CENTRO COMM/1GRUPPO FRIGO                                                                    GRUPPO FRIGO                            
+      8042          00020CERN.C.CENTRO COMM/1GRUPPO FRIGO                                                                    GRUPPO FRIGO                            
+      8044          00010CARA.SOLIVERI/4     GRUPPO FIRGO                                                                    GRUPPO FRIGO                            
+      8044          00010CARA.SOLIVERI/4     GRUPPO FIRGO                                                                    GRUPPO FRIGO                            
+      8044          00020CARA.SOLIVERI/4     GRUPPO FRIGO                                                                    GRUPPO FRIGO                            
+      8044          00020CARA.SOLIVERI/4     GRUPPO FRIGO                                                                    GRUPPO FRIGO                            
+      8045          00010TREV.C.AL CENTRO/5  GRUPPO FRIGO                                                                    GRUPPO FRIGO                            
+      8045          00010TREV.C.AL CENTRO/5  GRUPPO FRIGO                                                                    GRUPPO FRIGO                            
+      8045          00020TREV.C.AL CENTRO/5  GRUPPO IMAR                                                                     GRUPPO IMAR                             
+      8045          00020TREV.C.AL CENTRO/5  GRUPPO IMAR                                                                     GRUPPO IMAR                             
+      8251          00010DALM.FINAZZI        ROBUR                                                                           ROBUR                                   
+      8251          00010DALM.FINAZZI        ROBUR                                                                           ROBUR                                   
+      8251          00020DALM.FINAZZI        ROBUR                                                                           ROBUR                                   
+      8251          00020DALM.FINAZZI        ROBUR                                                                           ROBUR                                   
+      8298          00010DALM.PARIMBELLI     ROBUR                                                                           ROBUR                                   
+      8298          00010DALM.PARIMBELLI     ROBUR                                                                           ROBUR                                   
+      8298          00010DALM.PARIMBELLI     ROBUR                                                                           ROBUR                                   
+      8298          00010DALM.PARIMBELLI     ROBUR                                                                           ROBUR                                   
+      8298          00010DALM.PARIMBELLI     ROBUR                                                                           ROBUR                                   
+      8298          00020DALM.PARIMBELLI     ROBUR                                                                           ROBUR                                   
+      8298          00020DALM.PARIMBELLI     ROBUR                                                                           ROBUR                                   
+      8298          00020DALM.PARIMBELLI     ROBUR                                                                           ROBUR                                   
+      8298          00020DALM.PARIMBELLI     ROBUR                                                                           ROBUR                                   
+      8298          00020DALM.PARIMBELLI     ROBUR                                                                           ROBUR                                   
+      8298          00030DALM.PARIMBELLI     ROBUR                                                                           ROBUR                                   
+      8298          00030DALM.PARIMBELLI     ROBUR                                                                           ROBUR                                   
+      8298          00030DALM.PARIMBELLI     ROBUR                                                                           ROBUR                                   
+      8298          00030DALM.PARIMBELLI     ROBUR                                                                           ROBUR                                   
+      8298          00030DALM.PARIMBELLI     ROBUR                                                                           ROBUR                                   
+      8298          00040DALM.PARIMBELLI     ROBUR                                                                           ROBUR                                   
+      8298          00040DALM.PARIMBELLI     ROBUR                                                                           ROBUR                                   
+      8298          00040DALM.PARIMBELLI     ROBUR                                                                           ROBUR                                   
+      8298          00040DALM.PARIMBELLI     ROBUR                                                                           ROBUR                                   
+      8298          00040DALM.PARIMBELLI     ROBUR                                                                           ROBUR                                   
+      8298          00050DALM.PARIMBELLI     ROBUR                                                                           ROBUR                                   
+      8298          00050DALM.PARIMBELLI     ROBUR                                                                           ROBUR                                   
+      8298          00050DALM.PARIMBELLI     ROBUR                                                                           ROBUR                                   
+      8298          00050DALM.PARIMBELLI     ROBUR                                                                           ROBUR                                   
+      8298          00050DALM.PARIMBELLI     ROBUR                                                                           ROBUR                                   
+      8343          00010CURN.O.M.I.R. SRL/1 ROBUR                                                                           ROBUR                                   
+      8343          00010CURN.O.M.I.R. SRL/1 ROBUR                                                                           ROBUR                                   
+      8343          00020CURN.O.M.I.R. SRL/1 ROBUR                                                                           ROBUR                                   
+      8343          00020CURN.O.M.I.R. SRL/1 ROBUR                                                                           ROBUR                                   
+      8410          00010ARCE.AL MULINO      ROBUR                                                                           ROBUR                                   
+      8410          00010ARCE.AL MULINO      ROBUR                                                                           ROBUR                                   
+      8410          00020ARCE.AL MULINO      ROBUR                                                                           ROBUR                                   
+      8410          00020ARCE.AL MULINO      ROBUR                                                                           ROBUR                                   
+      8433          00010TREV.DOMINONI       ROBUR                                                                           ROBUR                                   
+      8433          00010TREV.DOMINONI       ROBUR                                                                           ROBUR                                   
+      8433          00020TREV.DOMINONI       ROBUR                                                                           ROBUR                                   
+      8433          00020TREV.DOMINONI       ROBUR                                                                           ROBUR                                   
+      8581          00010BRIG.MONZIO COMPAGN.ROBUR                                                                           ROBUR                                   
+      8581          00010BRIG.MONZIO COMPAGN.ROBUR                                                                           ROBUR                                   
+      8581          00020BRIG.MONZIO COMPAGN.ROBUR                                                                           ROBUR                                   
+      8581          00020BRIG.MONZIO COMPAGN.ROBUR                                                                           ROBUR                                   

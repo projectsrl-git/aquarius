@@ -1,0 +1,8 @@
+
+ALTER TABLE [dbo].[U_BAN_AN] ALTER COLUMN 
+	BAN_CONRIC	varchar(13) COLLATE Latin1_General_CI_AS NULL
+go
+
+ALTER TABLE [dbo].[U_BAN_AN] ALTER COLUMN 
+	BAN_CONCON	varchar(13) COLLATE Latin1_General_CI_AS NULL
+go

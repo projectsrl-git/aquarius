@@ -1,0 +1,15 @@
+
+/* 
+**************************************************************
+COME INSERIRE UN NUOVO CAMPO IN UNA TABELLA
+**************************************************************
+*/
+ALTER TABLE [dbo].[U_PRB_DD] ADD 
+	 ORD_FORNIT varchar(10) COLLATE Latin1_General_CI_AS NULL,
+	 ORD_RAGFOR varchar(50) COLLATE Latin1_General_CI_AS NULL
+go
+-- forzature di default (vedi script standard per valorizzare campi diversi da varchar)
+ALTER TABLE [dbo].[U_PRB_DD] WITH NOCHECK ADD 
+	CONSTRAINT [DF_U_PRBL_DD_ORD_FORNIT] DEFAULT ('') FOR [ORD_FORNIT],
+	CONSTRAINT [DF_U_PRBL_DD_ORD_RAGFOR] DEFAULT ('') FOR [ORD_RAGFOR]
+go

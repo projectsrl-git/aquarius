@@ -1,0 +1,15 @@
+  
+
+INSERT INTO UTENTI
+(USERID,PASSWORD,RUOLO,ID_CODICE,NOME,EMAIL,DATA,SCADENZA)
+VALUES
+('administrator','password','A','00000000','Administrator','luca.remiddi@project-online.it','2012/12/01',999)
+
+
+
+INSERT INTO UTENTI
+(USERID,PASSWORD,RUOLO,ID_CODICE,NOME,EMAIL,DATA,SCADENZA)
+VALUES
+('guest','password','G','','Guest','','2012/12/01',999)
+
+SELECT * FROM UTENTI

@@ -1,0 +1,26 @@
+
+
+Fatal error: Exception code=C0000005 @ 28/01/2019 14:03:07. Error log file: D:\Sviluppo\aquarius\VFP9Rerr.log
+	Called from -  menu_primanot_xml.crea_tabella_attachments line 0  {d:\sviluppo\aquarius\form\menu_primanot_xml.sct d:\sviluppo\aquarius\form\menu_primanot_xml.sct}
+	Called from -  menu_primanot_xml.crea_corpo_mov line 0  {d:\sviluppo\aquarius\form\menu_primanot_xml.sct d:\sviluppo\aquarius\form\menu_primanot_xml.sct}
+	Called from -  menu_primanot_xml.command4.click line 0  {d:\sviluppo\aquarius\form\menu_primanot_xml.sct d:\sviluppo\aquarius\form\menu_primanot_xml.sct}
+	Called from -  primano2.container35.shape1.click line 0  {d:\sviluppo\aquarius\form\menu_primanot.sct d:\sviluppo\aquarius\form\menu_primanot.sct}
+	Called from -  esegue_form line -946047415  {D:\aquarius\prg\winlib.prg winlib.fxp}
+	Called from -  determina_form_prima_nota line -946047415  {D:\Sviluppo\aquarius\prg\applilib.prg applilib.fxp}
+	Called from -  form1.apri_programma line 0  {d:\sviluppo\aquarius\form\submenu.sct d:\sviluppo\aquarius\form\submenu.sct}
+	Called from -  form1.label1.click line 0  {d:\sviluppo\aquarius\form\submenu.sct d:\sviluppo\aquarius\form\submenu.sct}
+	Called from -  ON...  line 0  { }
+	Called from -  startup line -946047415  {D:\aquarius\prg\startup.prg d:\sviluppo\aquarius\aquarius.exe}
+
+
+Fatal error: Exception code=C0000005 @ 28/01/2019 14:04:21. Error log file: D:\Sviluppo\aquarius\VFP9Rerr.log
+	Called from -  menu_primanot_xml.crea_tabella_attachments line 41  {d:\sviluppo\aquarius\form\menu_primanot_xml.sct d:\sviluppo\aquarius\form\menu_primanot_xml.sct}
+	Called from -  menu_primanot_xml.crea_corpo_mov line 159  {d:\sviluppo\aquarius\form\menu_primanot_xml.sct d:\sviluppo\aquarius\form\menu_primanot_xml.sct}
+	Called from -  menu_primanot_xml.command4.click line 11  {d:\sviluppo\aquarius\form\menu_primanot_xml.sct d:\sviluppo\aquarius\form\menu_primanot_xml.sct}
+	Called from -  primano2.container35.shape1.click line 51  {d:\sviluppo\aquarius\form\menu_primanot.sct d:\sviluppo\aquarius\form\menu_primanot.sct}
+	Called from -  esegue_form line 1859  {D:\aquarius\prg\winlib.prg winlib.fxp}
+	Called from -  determina_form_prima_nota line 62492  {D:\Sviluppo\aquarius\prg\applilib.prg applilib.fxp}
+	Called from -  form1.apri_programma line 12  {d:\sviluppo\aquarius\form\submenu.sct d:\sviluppo\aquarius\form\submenu.sct}
+	Called from -  form1.label1.click line 2  {d:\sviluppo\aquarius\form\submenu.sct d:\sviluppo\aquarius\form\submenu.sct}
+	Called from -  ON...  line 0  { }
+	Called from -  startup line 1387  {D:\aquarius\prg\startup.prg d:\sviluppo\aquarius\aquarius.exe}

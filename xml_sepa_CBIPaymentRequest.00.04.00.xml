@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CBIBdyPaymentRequest xmlns="urn:CBI:xsd:CBIBdyPaymentRequest.00.04.00" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   xsi:schemaLocation="urn:CBI:xsd:CBIBdyPaymentRequest.00.04.00 CBIBdyPaymentRequest.00.04.00.xsd">
+  <CBIEnvelPaymentRequest>
+    <CBIPaymentRequest>
+      <GrpHdr xmlns="urn:CBI:xsd:CBIPaymentRequest.00.04.00">
+        <MsgId>#IDENTIFICATIVOUNIVOCOMESSAGGIO#</MsgId>
+        <CreDtTm>#DATAORACREAZIONE#</CreDtTm>
+        <NbOfTxs>#NUMEROTRANSAZIONI#</NbOfTxs>
+        <CtrlSum>#TOTALEIMPORTITRANSAZIONI#</CtrlSum>
+        <InitgPty>
+          <Nm>#NOMEAZIENDAMITTENTE#</Nm>
+          <Id>
+            <OrgId>
+              <Othr>
+                <Id>#CODICECUCAZIENDAMITTENTE#</Id>
+                <Issr>CBI</Issr>
+              </Othr>
+            </OrgId>
+          </Id>
+        </InitgPty>
+      </GrpHdr>
+      <PmtInf xmlns="urn:CBI:xsd:CBIPaymentRequest.00.04.00">
+        <PmtInfId>#IDENTIFICATIVOUNIVOCOMESSAGGIO#</PmtInfId>
+        <PmtMtd>TRF</PmtMtd>
+        <PmtTpInf>
+          <InstrPrty>NORM</InstrPrty>
+          <SvcLvl>
+            <Cd>SEPA</Cd>
+          </SvcLvl>
+        </PmtTpInf>
+        <ReqdExctnDt>#DATAESECUZIONERICHIESTA#</ReqdExctnDt>
+        <Dbtr>
+          <Nm>#NOMEAZIENDAMITTENTE#</Nm>
+        </Dbtr>
+        <DbtrAcct>
+          <Id>
+            <IBAN>#IBANCONTOADDEBITO#</IBAN>
+          </Id>
+        </DbtrAcct>
+        <DbtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>#ABIBANCADEBITORE#</MmbId>
+            </ClrSysMmbId>
+          </FinInstnId>
+        </DbtrAgt>
+        <ChrgBr>SLEV</ChrgBr>
+        <CdtTrfTxInf xmlns="urn:CBI:xsd:CBIPaymentRequest.00.04.00">
+          <PmtId>
+            <InstrId>#NUMERO_RIGA#</InstrId>
+            <EndToEndId>#PROGRESSIVODISPOSIZIONE#</EndToEndId>
+          </PmtId>
+          <PmtTpInf>
+            <CtgyPurp>
+              <Cd>#CAUSALEBANCARIA#</Cd>
+            </CtgyPurp>
+          </PmtTpInf>
+          <Amt>
+            <InstdAmt Ccy="#DIVISADISPOSIZIONE#">#IMPORTODISPOSIZIONE#</InstdAmt>
+          </Amt>
+          <Cdtr>
+            <Nm>#NOMEBENEFICIARIO#</Nm>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <IBAN>#IBANBENEFICIARIO#</IBAN>
+            </Id>
+          </CdtrAcct>
+          <RmtInf>
+            <Ustrd>#CAUSALEDISPOSIZIONE#</Ustrd>
+          </RmtInf>
+        </CdtTrfTxInf>
+      </PmtInf>
+    </CBIPaymentRequest>
+  </CBIEnvelPaymentRequest>
+</CBIBdyPaymentRequest>

@@ -1,0 +1,15 @@
+/* 
+**************************************************************
+COME INSERIRE UN NUOVO CAMPO IN UNA TABELLA
+**************************************************************
+*/
+
+ALTER TABLE [dbo].[U_ORD_TT] ADD 
+	 ORD_ORDDDT bit NULL
+go
+-- forzature di default (vedi script standard per valorizzare campi diversi da varchar)
+ALTER TABLE [dbo].[U_ORD_TT] WITH NOCHECK ADD 
+	CONSTRAINT [DF_U_ORD_TT_ORD_ORDDDT] DEFAULT (0) FOR [ORD_ORDDDT]
+go
+
+UPDATE U_ORD_TT SET ORD_ORDDDT = 0

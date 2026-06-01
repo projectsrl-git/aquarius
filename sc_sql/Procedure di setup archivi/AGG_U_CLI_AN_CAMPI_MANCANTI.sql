@@ -1,0 +1,59 @@
+
+/* 
+**************************************************************
+COME INSERIRE UN NUOVO CAMPO IN UNA TABELLA
+**************************************************************
+*/
+
+
+ALTER TABLE [dbo].[U_CLI_AN] ADD 
+	CLI_CLFID2 varchar(1) COLLATE Latin1_General_CI_AS NOT NULL CONSTRAINT [DF_U_CLI_AN_CLI_CLFID2] DEFAULT ('')
+go
+
+
+
+ALTER TABLE [dbo].[U_CLI_AN] ADD 
+	CLI_IMPFI2 numeric(15,3) NOT NULL CONSTRAINT [DF_U_CLI_AN_CLI_IMPFI2] DEFAULT (0)
+go
+
+
+ALTER TABLE [dbo].[COMMESSA_DP] ADD 
+	 NOTE [text] COLLATE Latin1_General_CI_AS NULL
+go
+-- forzature di default (vedi script standard per valorizzare campi diversi da varchar)
+ALTER TABLE [dbo].[COMMESSA_DP] WITH NOCHECK ADD 
+	CONSTRAINT [DF_COMMESSA_DP_NOTE] DEFAULT ('') FOR [NOTE]
+go
+
+UPDATE COMMESSA_DP SET NOTE = ''
+
+
+
+ALTER TABLE [dbo].[FATTURABILE_S] ADD 
+	SEQUEN numeric(10,0) NOT NULL CONSTRAINT [DF_FATTURABILE_S_SEQUEN] DEFAULT (0)
+go
+
+
+ALTER TABLE [dbo].[FATTURABILE_R] ADD 
+	SEQUEN numeric(10,0) NOT NULL CONSTRAINT [DF_FATTURABILE_R_SEQUEN] DEFAULT (0)
+go
+
+
+ALTER TABLE [dbo].[FATTURABILE_A] ADD 
+	SEQUEN numeric(10,0) NOT NULL CONSTRAINT [DF_FATTURABILE_A_SEQUEN] DEFAULT (0)
+go
+
+
+ALTER TABLE [dbo].[FATTURABILE_P] ADD 
+	SEQUEN numeric(10,0) NOT NULL CONSTRAINT [DF_FATTURABILE_P_SEQUEN] DEFAULT (0)
+go
+
+
+ALTER TABLE [dbo].[FATTURABILE_X] ADD 
+	SEQUEN numeric(10,0) NOT NULL CONSTRAINT [DF_FATTURABILE_X_SEQUEN] DEFAULT (0)
+go
+
+
+
+
+

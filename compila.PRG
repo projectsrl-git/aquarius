@@ -1,0 +1,18 @@
+WAIT WINDOWS "Sto cancellando i .FXP e ricompilando i .PRG"  NOWAIT
+
+ERASE PRG\*.FXP
+ERASE PRG\*.BAK
+*ERASE AQUARIUS.EXE
+COMPILE PRG\*.PRG
+
+ERASE RICERCHE\*.FXP
+ERASE RICERCHE\*.BAK
+COMPILE RICERCHE\*.PRG
+
+WAIT WINDOWS "Sto compilando Aquarius" NOWAIT
+BUILD EXE AQUARIUS FROM AQUARIUS
+
+WAIT WINDOWS "Sto ricalcolando la versione di Aquarius" NOWAIT
+DO VERSIONE
+        
+WAIT WINDOWS "Fine compilazione progetti" NOWAIT

@@ -1,0 +1,5 @@
+
+ALTER TABLE [dbo].[U_ART_PR] ALTER COLUMN
+	 ART_CODIVA varchar(04) COLLATE Latin1_General_CI_AS NULL
+GO
+

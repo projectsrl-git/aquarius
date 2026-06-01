@@ -1,0 +1,3 @@
+ALTER TABLE [dbo].[U_SLC_CQ] ALTER COLUMN
+	 [SLC_RESPON] varchar (3) NULL
+GO

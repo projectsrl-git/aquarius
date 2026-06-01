@@ -1,0 +1,1 @@
+copy %1 C:\_Agg_Stru_SQL\Aquasql\. /Y

@@ -1,0 +1,14 @@
+
+if exists (select name,* from dbo.sysindexes where name = 'INDICE_05' AND id = OBJECT_ID('CONTI'))
+   drop index CONTI.INDICE_05
+GO
+
+/****** Object:  Index [INDICE_05]    Script Date: 23/06/2017 15:48:56 ******/
+CREATE NONCLUSTERED INDEX [INDICE_05] ON [dbo].[CONTI]
+(
+	[CON_ANNO] ASC
+)
+INCLUDE ( 	[CON_SOC],
+	[CON_CONTO],
+	[CON_POSBIL]) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO

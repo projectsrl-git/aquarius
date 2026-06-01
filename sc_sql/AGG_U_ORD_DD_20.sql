@@ -1,0 +1,8 @@
+
+ALTER TABLE [dbo].[U_ORD_DD] ALTER COLUMN 
+	ORD_NUMPRG varchar(10) COLLATE Latin1_General_CI_AS NULL
+go
+
+ALTER TABLE [dbo].[U_ORD_DD] ALTER COLUMN 
+	ORD_NUMPRG varchar(10) COLLATE Latin1_General_CI_AS NULL
+go

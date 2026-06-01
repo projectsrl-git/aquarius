@@ -1,0 +1,5 @@
+
+
+ALTER TABLE [dbo].[VENDITE_TT] ALTER COLUMN MOD_CODOPE varchar(50) COLLATE Latin1_General_CI_AS
+
+

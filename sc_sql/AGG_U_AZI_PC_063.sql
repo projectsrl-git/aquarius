@@ -1,0 +1,17 @@
+/*
+*** Variabili gestite nella scheda "Altro", sottoscheda "Web", sottoscheda "Twilio" dei parametri di sistema nel "form\menu_azi000.scx":
+***		- API URL
+***		- Account SID
+***		- Auth Token
+***		- SMS Sender Phone Number
+***		- WhatsApp Sender Phone Number
+*/
+        
+ALTER TABLE [DBO].[U_AZI_PC] ADD 
+	AZI_TWILIOURL VARCHAR(254) NOT NULL CONSTRAINT [DF_U_AZI_PC_AZI_TWILIOURL] DEFAULT (''),
+	AZI_TWILIOSID VARCHAR(34) NOT NULL CONSTRAINT [DF_U_AZI_PC_AZI_TWILIOSID] DEFAULT (''),
+	AZI_TWILIOAUTHTOKEN VARCHAR(32) NOT NULL CONSTRAINT [DF_U_AZI_PC_AZI_TWILIOAUTHTOKEN] DEFAULT (''),
+	AZI_TWILIOSMSPN VARCHAR(34) NOT NULL CONSTRAINT [DF_U_AZI_PC_AZI_TWILIOSMSPN] DEFAULT (''),
+	AZI_TWILIOWAPN VARCHAR(34) NOT NULL CONSTRAINT [DF_U_AZI_PC_AZI_TWILIOWAPN] DEFAULT ('')
+	
+GO

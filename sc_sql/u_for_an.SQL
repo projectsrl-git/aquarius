@@ -1,0 +1,108 @@
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[u_for_an]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[u_for_an]
+GO
+ 
+CREATE TABLE [dbo].[u_for_an] (
+	[id_unique]  uniqueidentifier ROWGUIDCOL  NOT NULL ,
+	[FOR_CODSOC] [varchar] (2) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_CODCLI] [varchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_CLICEE] [varchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_PARIVA] [varchar] (11) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_IVACEE] [varchar] (20) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_CODFIS] [varchar] (16) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_RAGSOC] [varchar] (40) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_PF] [varchar] (1) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_RAGDUE] [varchar] (40) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_INDIR] [varchar] (30) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_CAP] [varchar] (5) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_LOCALI] [varchar] (30) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_NAZION] [varchar] (3) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_VALUTA] [varchar] (3) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_ZONA] [varchar] (3) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_TELEFO] [varchar] (30) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_FAX] [varchar] (30) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_TELEX] [varchar] (30) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_CONPAG] [varchar] (3) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_BAE] [varchar] (5) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_BPF] [varchar] (5) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_INDEFF] [varchar] (30) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_CODIVA] [varchar] (3) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_NOTE] [text] COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_CONTO1] [varchar] (13) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_CONTO2] [varchar] (13) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_CONTO3] [varchar] (13) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_CONTO4] [varchar] (13) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_CONTO5] [varchar] (13) COLLATE Latin1_General_CI_AS NULL ,
+	[SELEZIONE] [varchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_RICERC] [varchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_ABICAB] [varchar] (20) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_NUMCOC] [varchar] (20) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_CODRAC] [varchar] (3) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_RIFERI] [varchar] (20) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_CIRPEF] [varchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_PERCCO] [numeric] (6,2) NULL ,
+	[FOR_PERCPR] [numeric] (6,2) NULL ,
+	[FOR_TETMAX] [numeric] (14,2) NULL ,
+	[FOR_PERCPA] [numeric] (6,2) NULL ,
+	[FOR_EMAIL] [varchar] (50) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_LUNASC] [varchar] (40) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_DTNASC] [varchar] (10) COLLATE Latin1_General_CI_AS NULL ,
+	[FOR_CONTRO] [varchar] (13) COLLATE Latin1_General_CI_AS NULL 
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[u_for_an] WITH NOCHECK ADD 
+	CONSTRAINT [PK_u_for_an] PRIMARY KEY  CLUSTERED 
+	(
+		[id_unique]
+	)  ON [PRIMARY] 
+GO
+
+ALTER TABLE [dbo].[u_for_an] WITH NOCHECK ADD 
+	CONSTRAINT [DF_u_for_an_id_unique] DEFAULT (newid()) FOR [id_unique],
+	CONSTRAINT [DF_u_for_an_FOR_CODSOC] DEFAULT ('') FOR [FOR_CODSOC],
+	CONSTRAINT [DF_u_for_an_FOR_CODCLI] DEFAULT ('') FOR [FOR_CODCLI],
+	CONSTRAINT [DF_u_for_an_FOR_CLICEE] DEFAULT ('') FOR [FOR_CLICEE],
+	CONSTRAINT [DF_u_for_an_FOR_PARIVA] DEFAULT ('') FOR [FOR_PARIVA],
+	CONSTRAINT [DF_u_for_an_FOR_IVACEE] DEFAULT ('') FOR [FOR_IVACEE],
+	CONSTRAINT [DF_u_for_an_FOR_CODFIS] DEFAULT ('') FOR [FOR_CODFIS],
+	CONSTRAINT [DF_u_for_an_FOR_RAGSOC] DEFAULT ('') FOR [FOR_RAGSOC],
+	CONSTRAINT [DF_u_for_an_FOR_PF] DEFAULT ('') FOR [FOR_PF],
+	CONSTRAINT [DF_u_for_an_FOR_RAGDUE] DEFAULT ('') FOR [FOR_RAGDUE],
+	CONSTRAINT [DF_u_for_an_FOR_INDIR] DEFAULT ('') FOR [FOR_INDIR],
+	CONSTRAINT [DF_u_for_an_FOR_CAP] DEFAULT ('') FOR [FOR_CAP],
+	CONSTRAINT [DF_u_for_an_FOR_LOCALI] DEFAULT ('') FOR [FOR_LOCALI],
+	CONSTRAINT [DF_u_for_an_FOR_NAZION] DEFAULT ('') FOR [FOR_NAZION],
+	CONSTRAINT [DF_u_for_an_FOR_VALUTA] DEFAULT ('') FOR [FOR_VALUTA],
+	CONSTRAINT [DF_u_for_an_FOR_ZONA] DEFAULT ('') FOR [FOR_ZONA],
+	CONSTRAINT [DF_u_for_an_FOR_TELEFO] DEFAULT ('') FOR [FOR_TELEFO],
+	CONSTRAINT [DF_u_for_an_FOR_FAX] DEFAULT ('') FOR [FOR_FAX],
+	CONSTRAINT [DF_u_for_an_FOR_TELEX] DEFAULT ('') FOR [FOR_TELEX],
+	CONSTRAINT [DF_u_for_an_FOR_CONPAG] DEFAULT ('') FOR [FOR_CONPAG],
+	CONSTRAINT [DF_u_for_an_FOR_BAE] DEFAULT ('') FOR [FOR_BAE],
+	CONSTRAINT [DF_u_for_an_FOR_BPF] DEFAULT ('') FOR [FOR_BPF],
+	CONSTRAINT [DF_u_for_an_FOR_INDEFF] DEFAULT ('') FOR [FOR_INDEFF],
+	CONSTRAINT [DF_u_for_an_FOR_CODIVA] DEFAULT ('') FOR [FOR_CODIVA],
+	CONSTRAINT [DF_u_for_an_FOR_NOTE] DEFAULT ('') FOR [FOR_NOTE],
+	CONSTRAINT [DF_u_for_an_FOR_CONTO1] DEFAULT ('') FOR [FOR_CONTO1],
+	CONSTRAINT [DF_u_for_an_FOR_CONTO2] DEFAULT ('') FOR [FOR_CONTO2],
+	CONSTRAINT [DF_u_for_an_FOR_CONTO3] DEFAULT ('') FOR [FOR_CONTO3],
+	CONSTRAINT [DF_u_for_an_FOR_CONTO4] DEFAULT ('') FOR [FOR_CONTO4],
+	CONSTRAINT [DF_u_for_an_FOR_CONTO5] DEFAULT ('') FOR [FOR_CONTO5],
+	CONSTRAINT [DF_u_for_an_SELEZIONE] DEFAULT ('') FOR [SELEZIONE],
+	CONSTRAINT [DF_u_for_an_FOR_RICERC] DEFAULT ('') FOR [FOR_RICERC],
+	CONSTRAINT [DF_u_for_an_FOR_ABICAB] DEFAULT ('') FOR [FOR_ABICAB],
+	CONSTRAINT [DF_u_for_an_FOR_NUMCOC] DEFAULT ('') FOR [FOR_NUMCOC],
+	CONSTRAINT [DF_u_for_an_FOR_CODRAC] DEFAULT ('') FOR [FOR_CODRAC],
+	CONSTRAINT [DF_u_for_an_FOR_RIFERI] DEFAULT ('') FOR [FOR_RIFERI],
+	CONSTRAINT [DF_u_for_an_FOR_CIRPEF] DEFAULT ('') FOR [FOR_CIRPEF],
+	CONSTRAINT [DF_u_for_an_FOR_PERCCO] DEFAULT (0) FOR [FOR_PERCCO],
+	CONSTRAINT [DF_u_for_an_FOR_PERCPR] DEFAULT (0) FOR [FOR_PERCPR],
+	CONSTRAINT [DF_u_for_an_FOR_TETMAX] DEFAULT (0) FOR [FOR_TETMAX],
+	CONSTRAINT [DF_u_for_an_FOR_PERCPA] DEFAULT (0) FOR [FOR_PERCPA],
+	CONSTRAINT [DF_u_for_an_FOR_EMAIL] DEFAULT ('') FOR [FOR_EMAIL],
+	CONSTRAINT [DF_u_for_an_FOR_LUNASC] DEFAULT ('') FOR [FOR_LUNASC],
+	CONSTRAINT [DF_u_for_an_FOR_DTNASC] DEFAULT ('') FOR [FOR_DTNASC],
+	CONSTRAINT [DF_u_for_an_FOR_CONTRO] DEFAULT ('') FOR [FOR_CONTRO]
+GO
+

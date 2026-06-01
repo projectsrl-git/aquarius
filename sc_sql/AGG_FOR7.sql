@@ -1,0 +1,23 @@
+/* 
+**************************************************************
+COME INSERIRE UN NUOVO CAMPO IN UNA TABELLA
+**************************************************************
+*/
+ALTER TABLE [dbo].[U_FOR_AN] ADD 
+	 	 FOR_COSATRATTA varchar(05) COLLATE Latin1_General_CI_AS NULL,
+	 	 FOR_GRADOIMPORTANZA varchar(05) COLLATE Latin1_General_CI_AS NULL,
+	 	 FOR_FORMAPAGAMENTO varchar(05) COLLATE Latin1_General_CI_AS NULL, 
+	 	 FOR_TIPOCONTRATTO varchar(05) COLLATE Latin1_General_CI_AS NULL
+go
+-- forzature di default (vedi script standard per valorizzare campi diversi da varchar)
+ALTER TABLE [dbo].[U_FOR_AN] WITH NOCHECK ADD 
+	CONSTRAINT [DF_U_FOR_AN_FOR_COSATRATTA] DEFAULT ('    ') FOR [FOR_COSATRATTA],
+	CONSTRAINT [DF_U_FOR_AN_FOR_GRADOIMPORTANZA] DEFAULT ('    ') FOR [FOR_GRADOIMPORTANZA],
+	CONSTRAINT [DF_U_FOR_AN_FOR_FORMAPAGAMENTO] DEFAULT ('    ') FOR [FOR_FORMAPAGAMENTO],
+	CONSTRAINT [DF_U_FOR_AN_FOR_TIPOCONTRATTO] DEFAULT ('    ') FOR [FOR_TIPOCONTRATTO]
+go
+
+UPDATE U_FOR_AN SET FOR_COSATRATTA = '     '
+UPDATE U_FOR_AN SET FOR_GRADOIMPORTANZA = '     '
+UPDATE U_FOR_AN SET FOR_FORMAPAGAMENTO = '     '
+UPDATE U_FOR_AN SET FOR_TIPOCONTRATTO = '     '

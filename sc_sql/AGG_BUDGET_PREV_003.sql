@@ -1,0 +1,30 @@
+/* 
+**************************************************************
+COME INSERIRE UN NUOVO CAMPO IN UNA TABELLA
+**************************************************************
+*/
+ALTER TABLE [dbo].[BUDGET_PREV] ADD 
+	CODAGE varchar(03) COLLATE Latin1_General_CI_AS NULL,
+	DESAGE varchar(100) COLLATE Latin1_General_CI_AS NULL,
+	PROVV1 numeric(17,6) NULL,
+	PROVV2 numeric(17,6) NULL,
+	PROVV3 numeric(17,6) NULL
+go
+-- forzature di default (vedi script standard per valorizzare campi diversi da varchar)
+
+ALTER TABLE [dbo].[BUDGET_PREV] WITH NOCHECK ADD 
+	CONSTRAINT [DF_BUDGET_PREV_CODAGE] DEFAULT ('') FOR [CODAGE],
+	CONSTRAINT [DF_BUDGET_PREV_DESAGE] DEFAULT ('') FOR [DESAGE],
+	CONSTRAINT [DF_BUDGET_PREV_PROVV1] DEFAULT (0) FOR [PROVV1],
+	CONSTRAINT [DF_BUDGET_PREV_PROVV2] DEFAULT (0) FOR [PROVV2],
+	CONSTRAINT [DF_BUDGET_PREV_PROVV3] DEFAULT (0) FOR [PROVV3]
+go
+
+UPDATE BUDGET_PREV SET CODAGE = ''
+UPDATE BUDGET_PREV SET DESAGE = ''
+UPDATE BUDGET_PREV SET PROVV2 = 0
+UPDATE BUDGET_PREV SET PROVV3 = 0
+UPDATE BUDGET_PREV SET PROVV1 = 0
+
+
+

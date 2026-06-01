@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp spec="1.0+" codebase="https://jws.agenziaentrate.it/jws/dichiarazioni/2018/" href="IVP18.jnlp">
+<information>
+  <title>Modello IVP 2018</title>
+  <icon href="logo.gif" kind="default" />
+  <vendor>Agenzia delle Entrate</vendor>
+  <homepage href="controlli2009Full.html" />
+  <description>Modello IVP 2018</description>
+  <offline-allowed/>
+  <shortcut> 
+    <menu submenu="Unico On Line"/>
+  </shortcut>  
+</information>
+<offline-allowed/>
+<security>
+  <all-permissions/> 
+</security>
+<update check="always" policy="always"/>
+<resources>
+  <j2se version="1.7+"  initial-heap-size="512M" max-heap-size="1024M" href="http://java.sun.com/products/autodl/j2se"/>
+  <jar href="IVP18/dom-jaxb-IVP18.jar"/>
+  <jar href="../dom-common-jaxb.jar"/>
+  <jar href="TelemCommonDic18.jar"/>	<!-- Telem Generale annualizzato-->
+  <jar href="ControlliIVP18.jar"/>    <!-- Telem IVI15 -->
+  <jar href="../TelemCommonV2.jar"/>	<!-- Telem Generale non annualizzato-->
+  <jar href="../../iText-2.1.4.jar" />
+  <jar href="../TelemCommonXML-2.0.0.jar"/>
+  <jar href="../XsdProject.jar"/>
+  <jar href="../EsitoXML_1.1.0.jar"/> 
+  <jar href="../ConverterXmlPojo_1.0.1.jar"/>
+  <jar href="../XMLReader_1.0.0.jar" />
+  <jar href="../../checkCF_PIVA.jar"/>
+  <jar href="../../AnagCtrlCFPiva.jar"/>
+  <jar href="../../jdom.jar" />
+  <jar href="../../Supporto.jar"/>
+  <jar href="../AssistenzaCommonV4.jar"/>  <!-- Assistenza Generale non annualizzato-->
+  <jar href="../AssistenzaCommonXML_2.0.0.jar"/> 
+  <jar href="IVP18/IVP18.jar"/>
+  <jar href="IVP18/ResIVP18.jar"/>
+  <jar href="../TeLogging_1.0.0.jar"/>
+  <jar href="../../xstream-1.4.7.jar" />
+  <jar href="../../jcalendar-1.3.2.jar" />
+  <jar href="../commons-beanutils-core-1.8.3.jar"/>
+  <jar href="../commons-logging-1.1.jar"/>
+  <jar href="../commons-io-2.1.jar"/>
+  </resources>
+<application-desc main-class="finanze.IDAC.guiIVP.MainWinIVP18">
+  <argument>jws</argument>
+  <argument>lingua=it</argument>
+</application-desc>
+</jnlp>

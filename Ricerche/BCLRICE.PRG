@@ -1,0 +1,115 @@
+
+PARAMETERS V_SEEK
+
+x_soci = "ord_codsoc = '" + PUB_CODSOC + "'"
+x_caus = "SUBSTRING(PARA.LIBERA,29,1) = 'S'"
+x_anno = "ord_anno = '" + PUB_ANNO + "'"
+x_cond = x_soci + " and " + x_caus
+IF DOC_ANNO
+   x_cond = x_cond + " and " + x_anno
+ENDIF
+
+cSelect = "SELECT dbo.ribalta2(ord_datord) as ord_datord_r, * from U_BOL_TT LEFT OUTER JOIN PARA ON PARA.CODICE = 'TOP'+U_BOL_TT.ORD_CAUS WHERE "
+
+DO CASE
+
+   CASE V_SCELTA=1          				&& ACCESSO PER NUMERO
+        IF PUB_VISRID 
+           IF EMPTY(V_SEEK) .OR. SUBSTR(V_SEEK,1,5) = SPACE(05)
+           ELSE
+              x_nor6   = 6
+              x_nor0   = TRC(x_nor6,ALLTRIM(V_SEEK))
+              x_nord   = "ord_numord = '" + x_nor0 + "'"
+              x_cond   = x_cond + " and " + x_nord
+           ENDIF
+        ELSE
+           x_nor6   = 6
+           x_nor0   = TRC(x_nor6,ALLTRIM(V_SEEK))
+           x_nord   = "ord_numord = '" + x_nor0 + "'"
+           x_cond   = x_cond + " and " + x_nord
+        ENDIF
+        _ii_cSql = cSelect + x_cond + " order by ord_codsoc,ord_numord,ord_anno" 
+
+   CASE V_SCELTA=2                          && ACCESSO PER DATA
+        IF PUB_VISRID 
+           IF EMPTY(V_SEEK) .OR. SUBSTR(V_SEEK,1,5) = SPACE(05)
+           ELSE
+              x_data = "ord_datord = '" + RIBALTA2(ALLTRIM(V_SEEK)) + "'"
+              x_cond = x_cond + " and " + x_data
+           ENDIF
+        ELSE
+           x_data = "ord_datord = '" + RIBALTA2(ALLTRIM(V_SEEK)) + "'"
+           x_cond = x_cond + " and " + x_data
+        ENDIF
+        _ii_cSql   = cSelect + x_cond + " order by ord_codsoc,ord_datord,ord_numord" 
+
+   CASE V_SCELTA=3          				&& ACCESSO PER RAGIONE SOCIALE
+        IF PUB_VISRID 
+           IF EMPTY(V_SEEK) .OR. SUBSTR(V_SEEK,1,5) = SPACE(05)
+           ELSE
+              x_rags = "ord_ragsoc like '" + ALLTRIM(V_SEEK) + "%'"
+              x_cond = x_cond + " and " + x_rags
+           ENDIF
+        ELSE
+           x_rags = "ord_ragsoc like '" + ALLTRIM(V_SEEK) + "%'"
+           x_cond = x_cond + " and " + x_rags
+        ENDIF
+        _ii_cSql   = cSelect + x_cond + " order by ord_codsoc,ord_ragsoc,ord_anno" 
+   CASE V_SCELTA=4          				&& ACCESSO PER CODICE AGENTE
+        IF PUB_VISRID 
+           IF EMPTY(V_SEEK) .OR. SUBSTR(V_SEEK,1,5) = SPACE(05)
+           ELSE
+              x_cage = "ord_age = '" + ALLTRIM(V_SEEK) + "'"
+              x_cond = x_cond + " and " + x_cage
+           ENDIF
+        ELSE
+           x_cage = "ord_age = '" + ALLTRIM(V_SEEK) + "'"
+           x_cond = x_cond + " and " + x_cage
+        ENDIF
+        _ii_cSql   = cSelect + x_cond + " order by ord_codsoc,ord_age,ord_datord" 
+	  	
+   CASE V_SCELTA=5          				&& ACCESSO PER CODICE CLIENTE
+        IF PUB_VISRID 
+           IF EMPTY(V_SEEK) .OR. SUBSTR(V_SEEK,1,5) = SPACE(05)
+           ELSE
+	  	      V_SEEK = TRC(PUB_LCL,ALLTRIM(V_SEEK))
+              x_clie = "ord_codcli = '" + ALLTRIM(V_SEEK) + "'"
+              x_cond = x_cond + " and " + x_clie
+           ENDIF
+        ELSE
+ 	       V_SEEK = TRC(PUB_LCL,ALLTRIM(V_SEEK))
+           x_clie = "ord_codcli = '" + ALLTRIM(V_SEEK) + "'"
+           x_cond = x_cond + " and " + x_clie
+        ENDIF
+        _ii_cSql   = cSelect + x_cond + " order by ord_codsoc,ord_codcli,ord_datord"
+                                                   
+   CASE V_SCELTA=6          				&& ACCESSO PER LOCALITA' DI DESTINAZIONE
+        IF PUB_VISRID 
+           IF EMPTY(V_SEEK) .OR. SUBSTR(V_SEEK,1,5) = SPACE(05)
+           ELSE
+              x_dest = "ord_locc like '" + ALLTRIM(V_SEEK) + "%'"
+              x_cond = x_cond + " and " + x_dest 
+           ENDIF
+        ELSE
+           x_dest = "ord_locc like '" + ALLTRIM(V_SEEK) + "%'"
+           x_cond = x_cond + " and " + x_dest 
+        ENDIF
+        _ii_cSql   = cSelect + x_cond + " order by ord_codsoc,ord_ragsoc,ord_anno"
+
+   CASE V_SCELTA=7          				&& ACCESSO PER RIFERIMENTO
+        IF PUB_VISRID 
+           IF EMPTY(V_SEEK) .OR. SUBSTR(V_SEEK,1,5) = SPACE(05)
+           ELSE
+              x_rife = "ord_riferi like '" + ALLTRIM(V_SEEK) + "%'"
+              x_cond = x_cond + " and " + x_rife
+           ENDIF
+        ELSE
+           x_rife = "ord_riferi like '" + ALLTRIM(V_SEEK) + "%'"
+           x_cond = x_cond + " and " + x_rife
+        ENDIF
+        _ii_cSql   = cSelect + x_cond + " order by ord_codsoc,ord_ragsoc,ord_anno"
+              
+ENDCASE
+
+RETURN
+

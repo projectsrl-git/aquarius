@@ -1,0 +1,1 @@
+alter table LOG_USER alter column DESCRI varchar(50)

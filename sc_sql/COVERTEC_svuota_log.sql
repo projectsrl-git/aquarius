@@ -1,0 +1,2 @@
+BACKUP LOG Covertec WITH TRUNCATE_ONLY 
+DBCC SHRINKFILE (covertecnew_Log, 0) 

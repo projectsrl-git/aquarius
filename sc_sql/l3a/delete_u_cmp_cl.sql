@@ -1,0 +1,6 @@
+SELECT * FROM U_CMP_CL
+
+DELETE U_CMP_CL
+
+
+

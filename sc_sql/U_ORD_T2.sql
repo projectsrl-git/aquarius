@@ -1,0 +1,20 @@
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[U_ORD_T2]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+	drop table [dbo].[U_ORD_T2]
+GO
+ 
+CREATE TABLE [dbo].[U_ORD_T2] (
+	id_unique  uniqueidentifier ROWGUIDCOL NOT NULL CONSTRAINT [DF_U_ORD_T2_id_unique] DEFAULT newid(),
+	TAGGANCIO varchar(10) COLLATE Latin1_General_CI_AS NOT NULL CONSTRAINT [DF_U_ORD_T2_TAGGANCIO] DEFAULT (''),
+	ORD_NUMORD varchar(6) COLLATE Latin1_General_CI_AS NOT NULL CONSTRAINT [DF_U_ORD_T2_ORD_NUMORD] DEFAULT (''),
+	ORD_DATORD varchar(10) COLLATE Latin1_General_CI_AS NOT NULL CONSTRAINT [DF_U_ORD_T2_ORD_DATORD] DEFAULT (''),
+	ORD_FECAUS varchar(200) COLLATE Latin1_General_CI_AS NOT NULL CONSTRAINT [DF_U_ORD_T2_ORD_FECAUS] DEFAULT (''),
+	ORD_RIFAMMFE varchar(150) COLLATE Latin1_General_CI_AS NOT NULL CONSTRAINT [DF_U_ORD_T2_ORD_RIFAMMFE] DEFAULT ('')
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[U_ORD_T2] WITH NOCHECK ADD 
+	CONSTRAINT [PK_U_ORD_T2] PRIMARY KEY CLUSTERED 
+	(
+		[id_unique]
+	)  ON [PRIMARY] 
+GO

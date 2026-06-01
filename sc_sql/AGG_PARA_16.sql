@@ -1,0 +1,4 @@
+
+ALTER TABLE [dbo].[PARA] ALTER COLUMN
+	 CODICE varchar(30) COLLATE Latin1_General_CI_AS NULL
+GO

@@ -1,0 +1,10 @@
+
+ALTER TABLE [DBO].[U_AZI_PA] ADD 
+	azi_protso NUMERIC(6,0) NULL
+GO
+
+ALTER TABLE [DBO].[U_AZI_PA] WITH NOCHECK ADD 
+	CONSTRAINT [DF_U_AZI_PA_azi_protso] DEFAULT (0) FOR [azi_protso]
+GO
+
+UPDATE U_AZI_PA SET azi_protso = 0

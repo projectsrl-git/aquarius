@@ -1,0 +1,6 @@
+
+ALTER TABLE [dbo].[U_ORD_TT] ALTER COLUMN
+	ORD_RIFERI varchar(80) COLLATE Latin1_General_CI_AS NULL
+GO
+
+

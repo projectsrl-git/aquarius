@@ -1,0 +1,4 @@
+
+ALTER TABLE [dbo].[PIANOP_DD] ALTER COLUMN 
+	NUMEROFATT varchar(20) COLLATE Latin1_General_CI_AS NULL 
+go

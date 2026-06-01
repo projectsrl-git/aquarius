@@ -1,0 +1,28 @@
+
+/*
+*** Variabile per l'opzione gestita nella scheda "Altro", sottoscheda "Documenti" , sottoschede dei relativi documenti dei parametri di sistema  nel "form\menu_azi000.scx":
+***		- Non stampa il commento 'PESO NETTO' negli ordini clienti
+***		- Non stampa il commento 'PESO NETTO' nelle bolle
+***		- Non stampa il commento 'PESO NETTO' nelle fatture
+***		- Non stampa il commento 'PESO NETTO' nelle fatture proforma
+*/
+
+
+ALTER TABLE [DBO].[U_AZI_PB] ADD 
+	AZI_NOSTPCOMPESORD BIT NULL,
+	AZI_NOSTPCOMPESBOL BIT NULL,
+	AZI_NOSTPCOMPESFAT BIT NULL,
+	AZI_NOSTPCOMPESFAP BIT NULL
+GO
+
+ALTER TABLE [DBO].[U_AZI_PB] WITH NOCHECK ADD 
+	CONSTRAINT [DF_U_AZI_PB_AZI_NOSTPCOMPESORD] DEFAULT (0) FOR [AZI_NOSTPCOMPESORD],
+	CONSTRAINT [DF_U_AZI_PB_AZI_NOSTPCOMPESBOL] DEFAULT (0) FOR [AZI_NOSTPCOMPESBOL],
+	CONSTRAINT [DF_U_AZI_PB_AZI_NOSTPCOMPESFAT] DEFAULT (0) FOR [AZI_NOSTPCOMPESFAT],
+	CONSTRAINT [DF_U_AZI_PB_AZI_NOSTPCOMPESFAP] DEFAULT (0) FOR [AZI_NOSTPCOMPESFAP]
+GO
+
+UPDATE U_AZI_PB SET AZI_NOSTPCOMPESORD = 0
+UPDATE U_AZI_PB SET AZI_NOSTPCOMPESBOL = 0
+UPDATE U_AZI_PB SET AZI_NOSTPCOMPESFAT = 0
+UPDATE U_AZI_PB SET AZI_NOSTPCOMPESFAP = 0

@@ -1,0 +1,15 @@
+
+/****** Oggetto:  Index [U_ART_N3]    Data script: 12/20/2012 17:09:22 ******/
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[U_ART_PR]') AND name = N'U_ART_N3')
+DROP INDEX [U_ART_N3] ON [dbo].[U_ART_PR] WITH ( ONLINE = OFF )
+GO
+
+/****** Object:  Index [U_ART_N3]    Script Date: 15/05/2016 15:44:12 ******/
+CREATE NONCLUSTERED INDEX [U_ART_N3] ON [dbo].[U_ART_PR]
+(
+	[ART_CODSOC] ASC,
+	[ART_NOTA3] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+
+

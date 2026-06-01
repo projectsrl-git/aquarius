@@ -1,0 +1,18 @@
+
+/****** Object:  Index [INDICE_04]    Script Date: 25/03/2014 09:57:13 ******/
+
+if exists (select * from sys.indexes where name = 'INDICE_04' and object_id = object_id(N'[dbo].[U_ORF_DD]'))
+	DROP INDEX INDICE_04 ON U_ORF_DD
+GO
+
+CREATE NONCLUSTERED INDEX [INDICE_04] ON [dbo].[U_ORF_DD]
+(
+	[DAGGANCIO] ASC,
+	[ORD_DESART] ASC,
+	[ORD_CODART] ASC,
+	[ORD_ALTEZZ] ASC,
+	[ORD_LUNGHE] ASC,
+	[ORD_MAGA] ASC
+
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO

@@ -1,0 +1,1 @@
+copy sc_sql\%1 C:\_Agg_Stru_SQL\Aquasql\sc_sql\. /y

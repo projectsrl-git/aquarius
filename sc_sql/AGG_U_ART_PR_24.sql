@@ -1,0 +1,4 @@
+
+ALTER TABLE [dbo].[U_ART_PR] ALTER COLUMN
+	 ART_LAVORA varchar(4) COLLATE Latin1_General_CI_AS
+GO

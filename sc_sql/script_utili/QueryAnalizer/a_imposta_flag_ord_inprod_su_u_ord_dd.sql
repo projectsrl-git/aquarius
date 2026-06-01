@@ -1,0 +1,1 @@
+SELECT * FROM U_MAG_GG

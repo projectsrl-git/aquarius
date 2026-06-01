@@ -1,0 +1,10 @@
+
+ALTER TABLE [dbo].[STRUTTURA_LISTINI] ADD 
+	COL_DESCOMAG varchar(03) COLLATE Latin1_General_CI_AS NULL
+go
+-- forzature di default (vedi script standard per valorizzare campi diversi da varchar)
+ALTER TABLE [dbo].[STRUTTURA_LISTINI] WITH NOCHECK ADD
+	CONSTRAINT [DF_STRUTTURA_LISTINI_COL_DESCOMAG] DEFAULT ('') FOR [COL_DESCOMAG]
+go
+
+UPDATE STRUTTURA_LISTINI SET COL_DESCOMAG = ''

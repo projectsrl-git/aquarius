@@ -1,0 +1,1 @@
+select top 10 case when u_mag_cp.mag_datini >= '2004/03/01' and u_mag_cp.mag_datfin <= '2004/03/31' then u_mag_cp.mag_przsco else u_mag_gg.mag_przcon end as pippo, * from u_mag_gg left outer join u_mag_cp on u_mag_gg.mag_codart=u_mag_cp.mag_codart order by pippo

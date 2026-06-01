@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:ec.europa.eu:taxud:vies:services:checkVat:types">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:checkVat>
+         <urn:countryCode>#COUNTRYCODE#</urn:countryCode>
+         <urn:vatNumber>#VATNUMBER#</urn:vatNumber>
+      </urn:checkVat>
+   </soapenv:Body>
+</soapenv:Envelope>

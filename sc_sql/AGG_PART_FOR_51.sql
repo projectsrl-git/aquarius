@@ -1,0 +1,4 @@
+
+ALTER TABLE [dbo].[PART_FOR] ALTER COLUMN 
+	PAR_DESMOV varchar(254) COLLATE Latin1_General_CI_AS NULL
+go

@@ -1,0 +1,11 @@
+/******************************************************************************
+ INSERIMENTO PARAMETRO "CANALI DI VENDITA"
+*******************************************************************************/
+
+DELETE FROM PARA WHERE CODICE LIKE 'CVE%'
+
+INSERT INTO PARA (CODICE, DESCRI, LIBERA, CODPGO, DESIVA) VALUES ('CVEB2B','RIVENDITORE','','','')
+INSERT INTO PARA (CODICE, DESCRI, LIBERA, CODPGO, DESIVA) VALUES ('CVEB2C','VENDITA DIRETTA','','','')
+INSERT INTO PARA (CODICE, DESCRI, LIBERA, CODPGO, DESIVA) VALUES ('CVES2T','DISTRIBUTORI','','','')
+
+SELECT * FROM PARA WHERE CODICE LIKE 'CVE%'

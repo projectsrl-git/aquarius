@@ -1,0 +1,24 @@
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[U_SCO_CA]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+	drop table [dbo].[U_SCO_CA]
+GO
+ 
+
+CREATE TABLE [dbo].[U_SCO_CA] (
+	[id_unique]  uniqueidentifier ROWGUIDCOL NOT NULL CONSTRAINT [DF_U_SCO_CA_id_unique] DEFAULT newid(),
+	[IDRIGA] varchar(10) COLLATE Latin1_General_CI_AS NOT NULL CONSTRAINT [DF_U_SCO_CA_IDRIGA] DEFAULT (''),
+	[CODCAC] varchar(9) COLLATE Latin1_General_CI_AS NOT NULL CONSTRAINT [DF_U_SCO_CA_CODCAC] DEFAULT (''),
+	[DESCAC] varchar(100) COLLATE Latin1_General_CI_AS NOT NULL CONSTRAINT [DF_U_SCO_CA_DESCAC] DEFAULT (''),
+	[CODCSA] varchar(9) COLLATE Latin1_General_CI_AS NOT NULL CONSTRAINT [DF_U_SCO_CA_CODCSA] DEFAULT (''),
+	[DESCSA] varchar(100) COLLATE Latin1_General_CI_AS NOT NULL CONSTRAINT [DF_U_SCO_CA_DESCSA] DEFAULT (''),
+	[CODSCO] varchar(9) COLLATE Latin1_General_CI_AS NOT NULL CONSTRAINT [DF_U_SCO_CA_CODSCO] DEFAULT (''),
+	[DTVADA] varchar(10) COLLATE Latin1_General_CI_AS NOT NULL CONSTRAINT [DF_U_SCO_CA_DTVADA] DEFAULT (''),
+	[DTVAAL] varchar(10) COLLATE Latin1_General_CI_AS NOT NULL CONSTRAINT [DF_U_SCO_CA_DTVAAL] DEFAULT ('')
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[U_SCO_CA] WITH NOCHECK ADD 
+	CONSTRAINT [PK_U_SCO_CA] PRIMARY KEY CLUSTERED 
+	(
+		[id_unique]
+	)  ON [PRIMARY] 
+GO

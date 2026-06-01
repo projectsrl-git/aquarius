@@ -1,0 +1,48 @@
+DO setlib
+
+
+PUB_CONDSPE = " "
+  
+V_DESPAG = ""
+DATA_SCAD=SPACE(10)
+PUBLIC VET_DAL[2],VET_AL[2],VET_DAY[2]
+VET_DAL[1]= "0000"      
+VET_DAL[2]= "0000"
+VET_AL[1] = "0000"
+VET_AL[2] = "0000" 
+VET_DAY[1]= "0000" 
+VET_DAY[2]= "0000"
+___INCASS	= ""
+___FLAG_POSALL = .T.			&& 2010-08-04 sergio posticipi per tutto l'anno
+___CLIENTE     = "00000001"		&& 2010-08-04 sergio posticipi per tutto l'anno
+ 
+V_CONPAG  		= "410"
+M.ORD_CPA    	= "410"
+M.ORD_DATORD 	= "14/06/2012"
+M.ORD_VALORE	= 3600.00
+__T_IMPON       = 3600.00
+__T_IMPOS       = 0
+ORD_VALUTA      = "EUR"
+
+SET STEP ON 
+
+V_TUTTO=TRANCHE("PARA",M.ORD_CPA,RIBALTA2(M.ORD_DATORD),M.ORD_VALORE,VET_DAL,VET_AL,VET_DAY,m.ord_valuta,___FLAG_POSALL,___CLIENTE,__T_IMPON,__T_IMPOS)  && 2010-08-04 sergio posticipi per tutto l'anno
+
+
+
+DO SCADULT     && RICERCA ULTIMA DATA SCADENZA
+DATASCAD  = DATA_SCAD
+
+WAIT WINDOWS V_TUTTO
+*!*	   DO SCADULT     && RICERCA ULTIMA DATA SCADENZA
+*!*	   M.ORD_DTSCAD = DATA_SCAD
+
+SELECT CU_TRANK
+GO TOP
+BROWSE NORMAL
+
+
+
+RETURN
+
+

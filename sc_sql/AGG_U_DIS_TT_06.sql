@@ -1,0 +1,23 @@
+/* 
+********************************************************************************
+AGGIUNTA CAMPI PER TRACCIATURA INSERIMENTI E MODIFICHE
+********************************************************************************
+*/
+
+ALTER TABLE [dbo].[U_DIS_TT] ADD 
+	REG_CODOPE varchar(20) COLLATE Latin1_General_CI_AS NOT NULL CONSTRAINT [DF_U_DIS_TT_REG_CODOPE] DEFAULT (''),
+	REG_NOMOPE varchar(50) COLLATE Latin1_General_CI_AS NOT NULL CONSTRAINT [DF_U_DIS_TT_REG_NOMOPE] DEFAULT (''),
+	REG_DATREG varchar (10) COLLATE Latin1_General_CI_AS NOT NULL CONSTRAINT [DF_U_DIS_TT_REG_DATREG] DEFAULT (''),
+	REG_ORAREG varchar (08) COLLATE Latin1_General_CI_AS NOT NULL CONSTRAINT [DF_U_DIS_TT_REG_ORAREG] DEFAULT (''),
+	MOD_CODOPE varchar(20) COLLATE Latin1_General_CI_AS NOT NULL CONSTRAINT [DF_U_DIS_TT_MOD_CODOPE] DEFAULT (''),
+	MOD_NOMOPE varchar(50) COLLATE Latin1_General_CI_AS NOT NULL CONSTRAINT [DF_U_DIS_TT_MOD_NOMOPE] DEFAULT (''),
+	MOD_DATREG varchar (10) COLLATE Latin1_General_CI_AS NOT NULL CONSTRAINT [DF_U_DIS_TT_MOD_DATREG] DEFAULT (''),
+	MOD_ORAREG varchar (08) COLLATE Latin1_General_CI_AS NOT NULL CONSTRAINT [DF_U_DIS_TT_MOD_ORAREG] DEFAULT ('')
+go
+
+UPDATE U_DIS_TT SET 
+	REG_CODOPE = 'SER',
+	REG_NOMOPE = 'ASS. - Assistenza Project',
+	REG_DATREG = convert(varchar, GETDATE(), 111),
+	REG_ORAREG = '00:00:00'
+WHERE REG_CODOPE = '' AND REG_DATREG = ''

@@ -1,0 +1,143 @@
+
+
+ALTER TABLE [dbo].[U_LIS_TT] ADD 
+	 LIS_UMCLI varchar(3) COLLATE Latin1_General_CI_AS NULL,
+	 LIS_PRECLI numeric (17,6)
+go
+-- forzature di default (vedi script standard per valorizzare campi diversi da varchar)
+ALTER TABLE [dbo].[U_LIS_TT] WITH NOCHECK ADD 
+	CONSTRAINT [DF_U_LIS_TT_LIS_UMCLI] DEFAULT ('') FOR [LIS_UMCLI],
+	CONSTRAINT [DF_U_LIS_TT_LIS_PRECLI] DEFAULT (0) FOR [LIS_PRECLI]
+go
+
+UPDATE U_LIS_TT SET LIS_UMCLI = ''
+UPDATE U_LIS_TT SET LIS_PRECLI = 0
+
+
+ALTER TABLE [dbo].[U_OFF_DD] ADD 
+	 ORD_UMCLI varchar(3) COLLATE Latin1_General_CI_AS NULL,
+	 ORD_QTACLI numeric (8,0),
+	 ORD_PRECLI numeric (17,6)
+go
+-- forzature di default (vedi script standard per valorizzare campi diversi da varchar)
+ALTER TABLE [dbo].[U_OFF_DD] WITH NOCHECK ADD 
+	CONSTRAINT [DF_U_OFF_DD_ORD_UMCLI] DEFAULT ('') FOR [ORD_UMCLI],
+	CONSTRAINT [DF_U_OFF_DD_ORD_QTACLI] DEFAULT (0) FOR [ORD_QTACLI],
+	CONSTRAINT [DF_U_OFF_DD_ORD_PRECLI] DEFAULT (0) FOR [ORD_PRECLI]
+go
+
+
+UPDATE U_OFF_DD SET ORD_UMCLI = ''
+UPDATE U_OFF_DD SET ORD_QTACLI = 0
+UPDATE U_OFF_DD SET ORD_PRECLI = 0
+
+ALTER TABLE [dbo].[U_ORD_DD] ADD 
+	 ORD_UMCLI varchar(3) COLLATE Latin1_General_CI_AS NULL,
+	 ORD_QTACLI numeric (8,0),
+	 ORD_PRECLI numeric (17,6)
+go
+-- forzature di default (vedi script standard per valorizzare campi diversi da varchar)
+ALTER TABLE [dbo].[U_ORD_DD] WITH NOCHECK ADD 
+	CONSTRAINT [DF_U_ORD_DD_ORD_UMCLI] DEFAULT ('') FOR [ORD_UMCLI],
+	CONSTRAINT [DF_U_ORD_DD_ORD_QTACLI] DEFAULT (0) FOR [ORD_QTACLI],
+	CONSTRAINT [DF_U_ORD_DD_ORD_PRECLI] DEFAULT (0) FOR [ORD_PRECLI]
+go
+
+
+UPDATE U_ORD_DD SET ORD_UMCLI = ''
+UPDATE U_ORD_DD SET ORD_QTACLI = 0
+UPDATE U_ORD_DD SET ORD_PRECLI = 0
+
+
+ALTER TABLE [dbo].[U_ORF_DD] ADD 
+	 ORD_UMCLI varchar(3) COLLATE Latin1_General_CI_AS NULL,
+	 ORD_QTACLI numeric (8,0),
+	 ORD_PRECLI numeric (17,6)
+go
+-- forzature di default (vedi script standard per valorizzare campi diversi da varchar)
+ALTER TABLE [dbo].[U_ORF_DD] WITH NOCHECK ADD 
+	CONSTRAINT [DF_U_ORF_DD_ORD_UMCLI] DEFAULT ('') FOR [ORD_UMCLI],
+	CONSTRAINT [DF_U_ORF_DD_ORD_QTACLI] DEFAULT (0) FOR [ORD_QTACLI],
+	CONSTRAINT [DF_U_ORF_DD_ORD_PRECLI] DEFAULT (0) FOR [ORD_PRECLI]
+go
+
+
+UPDATE U_ORF_DD SET ORD_UMCLI = ''
+UPDATE U_ORF_DD SET ORD_QTACLI = 0
+UPDATE U_ORF_DD SET ORD_PRECLI = 0
+
+
+
+ALTER TABLE [dbo].[U_BOL_DD] ADD 
+	 ORD_UMCLI varchar(3) COLLATE Latin1_General_CI_AS NULL,
+	 ORD_QTACLI numeric (8,0),
+	 ORD_PRECLI numeric (17,6)
+go
+-- forzature di default (vedi script standard per valorizzare campi diversi da varchar)
+ALTER TABLE [dbo].[U_BOL_DD] WITH NOCHECK ADD 
+	CONSTRAINT [DF_U_BOL_DD_ORD_UMCLI] DEFAULT ('') FOR [ORD_UMCLI],
+	CONSTRAINT [DF_U_BOL_DD_ORD_QTACLI] DEFAULT (0) FOR [ORD_QTACLI],
+	CONSTRAINT [DF_U_BOL_DD_ORD_PRECLI] DEFAULT (0) FOR [ORD_PRECLI]
+go
+
+
+UPDATE U_BOL_DD SET ORD_UMCLI = ''
+UPDATE U_BOL_DD SET ORD_QTACLI = 0
+UPDATE U_BOL_DD SET ORD_PRECLI = 0
+
+
+
+ALTER TABLE [dbo].[L_BOL_DD] ADD 
+	 ORD_UMCLI varchar(3) COLLATE Latin1_General_CI_AS NULL,
+	 ORD_QTACLI numeric (8,0),
+	 ORD_PRECLI numeric (17,6)
+go
+-- forzature di default (vedi script standard per valorizzare campi diversi da varchar)
+ALTER TABLE [dbo].[L_BOL_DD] WITH NOCHECK ADD 
+	CONSTRAINT [DF_L_BOL_DD_ORD_UMCLI] DEFAULT ('') FOR [ORD_UMCLI],
+	CONSTRAINT [DF_L_BOL_DD_ORD_QTACLI] DEFAULT (0) FOR [ORD_QTACLI],
+	CONSTRAINT [DF_L_BOL_DD_ORD_PRECLI] DEFAULT (0) FOR [ORD_PRECLI]
+go
+
+
+UPDATE L_BOL_DD SET ORD_UMCLI = ''
+UPDATE L_BOL_DD SET ORD_QTACLI = 0
+UPDATE L_BOL_DD SET ORD_PRECLI = 0
+
+
+
+ALTER TABLE [dbo].[U_FAT_DD] ADD 
+	 ORD_UMCLI varchar(3) COLLATE Latin1_General_CI_AS NULL,
+	 ORD_QTACLI numeric (8,0),
+	 ORD_PRECLI numeric (17,6)
+go
+-- forzature di default (vedi script standard per valorizzare campi diversi da varchar)
+ALTER TABLE [dbo].[U_FAT_DD] WITH NOCHECK ADD 
+	CONSTRAINT [DF_U_FAT_DD_ORD_UMCLI] DEFAULT ('') FOR [ORD_UMCLI],
+	CONSTRAINT [DF_U_FAT_DD_ORD_QTACLI] DEFAULT (0) FOR [ORD_QTACLI],
+	CONSTRAINT [DF_U_FAT_DD_ORD_PRECLI] DEFAULT (0) FOR [ORD_PRECLI]
+go
+
+
+UPDATE U_FAT_DD SET ORD_UMCLI = ''
+UPDATE U_FAT_DD SET ORD_QTACLI = 0
+UPDATE U_FAT_DD SET ORD_PRECLI = 0
+
+ALTER TABLE [dbo].[U_FAP_DD] ADD 
+	 ORD_UMCLI varchar(3) COLLATE Latin1_General_CI_AS NULL,
+	 ORD_QTACLI numeric (8,0),
+	 ORD_PRECLI numeric (17,6)
+go
+-- forzature di default (vedi script standard per valorizzare campi diversi da varchar)
+ALTER TABLE [dbo].[U_FAP_DD] WITH NOCHECK ADD 
+	CONSTRAINT [DF_U_FAP_DD_ORD_UMCLI] DEFAULT ('') FOR [ORD_UMCLI],
+	CONSTRAINT [DF_U_FAP_DD_ORD_QTACLI] DEFAULT (0) FOR [ORD_QTACLI],
+	CONSTRAINT [DF_U_FAP_DD_ORD_PRECLI] DEFAULT (0) FOR [ORD_PRECLI]
+go
+
+
+UPDATE U_FAP_DD SET ORD_UMCLI = ''
+UPDATE U_FAP_DD SET ORD_QTACLI = 0
+UPDATE U_FAP_DD SET ORD_PRECLI = 0
+
+

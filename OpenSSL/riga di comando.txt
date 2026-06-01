@@ -1,0 +1,1 @@
+openssl smime -verify -noverify -in file.xml.p7m -inform DER -out file.xml

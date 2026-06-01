@@ -1,0 +1,1 @@
+%SystemRoot%\explorer.exe /e,C:\COVERTEC\Contatti_da_esportare                                                                                                                                          

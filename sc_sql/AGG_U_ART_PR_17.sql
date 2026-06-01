@@ -1,0 +1,20 @@
+/***************************************************************
+COME INSERIRE UN NUOVO CAMPO IN UNA TABELLA
+***************************************************************/
+
+ALTER TABLE [dbo].[U_ART_AN] ADD 
+	ART_XCOSLAI varchar(16) COLLATE Latin1_General_CI_AS NULL,
+	ART_XCOSLAE varchar(16) COLLATE Latin1_General_CI_AS NULL,
+	ART_XCOSATR varchar(16) COLLATE Latin1_General_CI_AS NULL
+go
+
+ALTER TABLE [dbo].[U_ART_AN] WITH NOCHECK ADD 
+	CONSTRAINT [DF_U_ART_AN_ART_XCOSLAI] DEFAULT ('') FOR [ART_XCOSLAI],
+	CONSTRAINT [DF_U_ART_AN_ART_XCOSLAE] DEFAULT ('') FOR [ART_XCOSLAE],
+	CONSTRAINT [DF_U_ART_AN_ART_XCOSATR] DEFAULT ('') FOR [ART_XCOSATR]
+go
+
+
+UPDATE U_ART_AN SET ART_XCOSLAI = '' 
+UPDATE U_ART_AN SET ART_XCOSLAE = '' 
+UPDATE U_ART_AN SET ART_XCOSATR = '' 

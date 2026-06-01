@@ -1,0 +1,12 @@
+
+ALTER TABLE [dbo].[AUTORIZZAZIONI] ADD 
+	LIC_LICENZA_USO [bit] NULL
+go
+-- forzature di default (vedi script standard per valorizzare campi diversi da varchar)
+
+ALTER TABLE [dbo].[AUTORIZZAZIONI] WITH NOCHECK ADD 
+	CONSTRAINT [DF_AUTORIZZAZIONI_LIC_LICENZA_USO] DEFAULT (0) FOR [LIC_LICENZA_USO]
+go
+
+
+UPDATE AUTORIZZAZIONI SET LIC_LICENZA_USO = 0

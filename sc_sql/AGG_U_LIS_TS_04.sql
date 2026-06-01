@@ -1,0 +1,4 @@
+
+ALTER TABLE [dbo].[U_LIS_TS] ALTER COLUMN 
+	LIS_TIPOPR varchar(2) COLLATE Latin1_General_CI_AS NULL 
+go

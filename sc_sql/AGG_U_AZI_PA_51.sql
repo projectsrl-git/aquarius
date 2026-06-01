@@ -1,0 +1,34 @@
+/* 
+**************************************************************
+COME INSERIRE UN NUOVO CAMPO IN UNA TABELLA
+**************************************************************
+*/
+
+ALTER TABLE [dbo].[U_AZI_PA] ADD 
+	AZI_MAXRDA Numeric(17,2) NULL ,
+	AZI_MACINA varchar(6) COLLATE Latin1_General_CI_AS NULL ,
+	AZI_PRESSA varchar(6) COLLATE Latin1_General_CI_AS NULL ,
+	AZI_TAGLIO varchar(6) COLLATE Latin1_General_CI_AS NULL ,
+	AZI_LEVIGA varchar(6) COLLATE Latin1_General_CI_AS NULL ,
+	AZI_NOBILI varchar(6) COLLATE Latin1_General_CI_AS NULL ,
+	AZI_PROFIN varchar(6) COLLATE Latin1_General_CI_AS NULL 
+go
+-- forzature di default (vedi script standard per valorizzare campi diversi da varchar)
+ALTER TABLE [dbo].[U_AZI_PA] WITH NOCHECK ADD 
+	CONSTRAINT [DF_U_AZI_PA_AZI_MAXRDA] DEFAULT (0) FOR [AZI_MAXRDA],	
+	CONSTRAINT [DF_U_AZI_PA_AZI_MACINA] DEFAULT ('') FOR [AZI_MACINA],
+	CONSTRAINT [DF_U_AZI_PA_AZI_PRESSA] DEFAULT ('') FOR [AZI_PRESSA],
+	CONSTRAINT [DF_U_AZI_PA_AZI_TAGLIO] DEFAULT ('') FOR [AZI_TAGLIO],
+	CONSTRAINT [DF_U_AZI_PA_AZI_LEVIGA] DEFAULT ('') FOR [AZI_LEVIGA],
+	CONSTRAINT [DF_U_AZI_PA_AZI_NOBILI] DEFAULT ('') FOR [AZI_NOBILI]
+go
+
+UPDATE U_AZI_PA SET AZI_MAXRDA = 400
+UPDATE U_AZI_PA SET AZI_MACINA = ''
+UPDATE U_AZI_PA SET AZI_PRESSA = ''
+UPDATE U_AZI_PA SET AZI_TAGLIO = ''
+UPDATE U_AZI_PA SET AZI_LEVIGA = ''
+UPDATE U_AZI_PA SET AZI_NOBILI = ''
+UPDATE U_AZI_PA SET AZI_PROFIN = ''
+
+GO

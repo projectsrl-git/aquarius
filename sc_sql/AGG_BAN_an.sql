@@ -1,0 +1,5 @@
+
+ALTER TABLE [dbo].[U_BAN_AN] ALTER COLUMN
+	 BAN_DESBAN varchar(80) COLLATE Latin1_General_CI_AS NULL 
+GO
+

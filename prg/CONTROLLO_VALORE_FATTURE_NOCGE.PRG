@@ -1,0 +1,151 @@
+
+_DATADAL = INPUTBOX("Selezionare la Data Fattura Dal","Data Dal",DTOC(DATE()))
+IF EMPTY(_DATADAL)
+	MESSAGEBOX("Data non selezionata",16,"Attenzione")
+	RETURN .F.
+ENDIF
+
+WAIT WINDOWS "Elaborazione in corso..." NOWAIT
+
+x_comm = "U_FAT_DD.ORD_DESART <> '*** COMMENTO ***'"
+x_coge = "U_FAT_TT.ORD_CGE = 0"
+x_dtda = "U_FAT_TT.ORD_DATORD >= '" + RIBALTA2(_DATADAL) + "'"
+x_cond = x_comm + " and " + x_coge + " and " + x_dtda 
+cSql = 	"SELECT U_FAT_DD.ID_UNIQUE, U_FAT_DD.DAGGANCIO, U_FAT_TT.ORD_NUMORD, U_FAT_TT.ORD_DATORD, U_FAT_DD.ORD_CODART, U_FAT_DD.ORD_PREZZO, U_FAT_DD.ORD_SC1, " + ;
+        "U_FAT_DD.ORD_SC2, U_FAT_DD.ORD_SC3, U_FAT_DD.ORD_SC4, U_FAT_DD.ORD_SC5, U_FAT_DD.ORD_PRZNET, U_FAT_DD.ORD_QTAORD, U_FAT_DD.ORD_VALORE, U_FAT_DD.ORD_SEQUEN, " + ;
+        "U_FAT_DD.ORD_PRZNET AS AGG_PRZNET, U_FAT_DD.ORD_VALORE AS AGG_VALORE, SPACE(10) AS SELEZIONE FROM U_FAT_TT LEFT OUTER JOIN U_FAT_DD ON U_FAT_TT.TAGGANCIO = U_FAT_DD.DAGGANCIO " + ;
+        "WHERE " + x_cond + " ORDER BY U_FAT_TT.ORD_DATORD,U_FAT_TT.ORD_NUMORD,U_FAT_DD.ORD_SEQUEN"
+IF !ExecCommand(cSql,"SEL_FAT_DD")
+  return(.f.)
+ENDIF
+SELECT SEL_FAT_DD
+GO TOP
+SCAN
+	SCATTER MEMVAR
+	VPRE         = M.ORD_PREZZO
+	VPRE         = VPRE-ROUND((VPRE*M.ORD_SC1/100),6)
+	VPRE         = VPRE-ROUND((VPRE*M.ORD_SC2/100),6)
+	VPRE         = VPRE-ROUND((VPRE*M.ORD_SC3/100),6)
+	VPRE         = VPRE-ROUND((VPRE*M.ORD_SC4/100),6)
+	VPRE         = VPRE-ROUND((VPRE*M.ORD_SC5/100),6)
+	_AGG_PRZNET = ROUND(VPRE,6)
+	_AGG_VALORE = ROUND((_AGG_PRZNET*M.ORD_QTAORD),2)
+	REPLACE AGG_PRZNET WITH _AGG_PRZNET 
+	REPLACE AGG_VALORE WITH _AGG_VALORE
+	IF ABS(ABS(AGG_VALORE) - ABS(M.ORD_VALORE)) <= 0.02
+		DELETE
+	ELSE
+		REPLACE SELEZIONE WITH "==>"
+		*REPLACE SELEZIONE WITH ""
+	ENDIF
+ENDSCAN
+
+SELECT SEL_FAT_DD
+GO TOP
+
+DO prg\browseview WITH "SEL_FAT_DD","Seleziona le fatture non ancora contabilizzate per cui ricalcolare il valore", ;
+	"ORD_NUMORD:Numero,W:5;ORD_DATORD:Data,W:10;ORD_CODART:Cod.Articolo,W:16;ORD_PREZZO:Prezzo,W:10;ORD_SC1:Sc.1,W:5;ORD_SC2:Sc.2,W:5;ORD_SC3:Sc.3,W:5;" + ;
+	"ORD_SC4:Sc.4,W:5;ORD_SC5:Sc.5,W:5;ORD_QTAORD:Qtà,W:10;ORD_PRZNET:Prz.Netto,W:10;ORD_VALORE:Valore,W:10;AGG_PRZNET:Prz.Netto Ricalc.,W:10;AGG_VALORE:Valore Ricalc.,W:10;",630,1000,.T.,.F.
+
+_SOMMA = 0
+SELECT SEL_FAT_DD
+GO TOP
+SCAN
+	_SOMMA = _SOMMA + ABS(ABS(AGG_VALORE) - ABS(ORD_VALORE))
+ENDSCAN
+
+WAIT WINDOWS "DIFFERENZA TOTALE: " + ALLTRIM(STR(_SOMMA,17,2))
+
+
+SELECT SEL_FAT_DD
+GO TOP
+IF NumeroRecordLetti = 0
+   MESSAGEBOX("Nessuna fattura selezionata per l'aggiornamento",64,"Informazione") 
+   RETURN(.F.)
+ENDIF
+
+_RISP = MESSAGEBOX("Proseguire con l'aggiornamento delle fatture selezionate?",4+48,"Attenzione")
+IF _RISP = 6
+ELSE
+	MESSAGEBOX("Operazione abbandonata",64,"Informazione")
+	RETURN .F.
+ENDIF
+
+_CONTA_DETT = 0
+_CONTA_TEST = 0
+
+SELECT SEL_FAT_DD
+GO TOP
+DO WHILE !EOF()
+	IF DELETED()
+		SKIP +1
+		LOOP
+	ENDIF
+	
+	SCATTER MEMVAR
+	
+	IF ALLTRIM(M.SELEZIONE) == "==>"
+	ELSE
+		SKIP +1
+		LOOP
+	ENDIF
+
+	x_unqu = "ID_UNIQUE = '" + M.ID_UNIQUE + "'"
+	x_cond = x_unqu 
+	cSql = 	"SELECT * FROM U_FAT_DD WHERE " + x_cond
+	IF !ExecRW(cSql,"U_FAT_DD","R")
+	  return(.f.)
+	ENDIF
+	SELECT U_FAT_DD
+	GO TOP
+	IF !EOF()
+		REPLACE ORD_PRZNET WITH M.AGG_PRZNET
+		REPLACE ORD_VALORE WITH M.AGG_VALORE
+		_CONTA_DETT = _CONTA_DETT + 1
+	ENDIF
+	IF !ExecRW(cSql,"U_FAT_DD","W")
+	  return(.f.)
+	ENDIF
+	
+	SELECT SEL_FAT_DD
+	SKIP +1
+	LOOP
+ENDDO
+
+SELECT DISTINCT DAGGANCIO FROM SEL_FAT_DD WHERE ALLTRIM(SELEZIONE) == "==>" INTO CURSOR SEL_FAT_TT
+SELECT SEL_FAT_TT
+GO TOP
+DO WHILE !EOF()
+	IF DELETED()
+		SKIP +1
+		LOOP
+	ENDIF
+	
+	___TAGGANCIO___ = DAGGANCIO
+	
+	x_agga = "TAGGANCIO = '" + ___TAGGANCIO___ + "'"
+	x_cond = x_agga 
+	cSql = 	"SELECT * FROM U_FAT_TT WHERE " + x_cond 
+	IF !ExecCommand(cSql,"CX_FAT_TT")
+	  return(.f.)
+	ENDIF
+	SELECT CX_FAT_TT
+	GO TOP
+	SCATTER MEMVAR
+	
+	SELECT SEL_FAT_TT
+	
+	DO FATCAVOL WITH ___TAGGANCIO___	&& RICALCOLA IL TOTALE DEL DOCUMENTO IN EFFETTIVO SUL DB
+	
+	_CONTA_TEST = _CONTA_TEST + 1
+	
+	SELECT SEL_FAT_TT
+	SKIP +1
+	LOOP
+ENDDO
+
+MESSAGEBOX("Operazione effettuata" + CHR(13) + CHR(13) + ;
+	"Totale Testate Fatture aggiornate: " + ALLTRIM(STR(_CONTA_TEST,10,0)) + CHR(13) + ;
+	"Totale Dettagli Fatture aggiornati: " + ALLTRIM(STR(_CONTA_DETT,10,0)),64,"Informazione")
+
+RETURN

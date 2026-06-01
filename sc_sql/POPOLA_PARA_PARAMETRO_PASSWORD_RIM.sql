@@ -1,0 +1,5 @@
+
+DELETE FROM PARA WHERE CODICE = 'PWDMFC'
+INSERT INTO PARA (CODICE,DESCRI,LIBERA,CODPGO,ITALIANO) VALUES ('PWDRIM','PASSWORD PER RESET GIACENZE IMPEGNATE PER ORDINI DA CHECK LIST DI SPEDIZIONE','RQIMP','','Password richiesta facendo click con tasto DX del mouse sulla Qtà impegnata nel form delle situazioni giacenze per dispositivi medicali (PDM_SITGIAC)')
+
+SELECT * FROM PARA WHERE CODICE IN ('PWDRIM')

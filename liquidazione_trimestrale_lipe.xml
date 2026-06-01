@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<iv:Fornitura xmlns:iv=#AZI_FORNITURA#
+    <iv:Intestazione>
+        <iv:CodiceFornitura>#AZI_COD_FORNITURA#</iv:CodiceFornitura>
+        <iv:CodiceFiscaleDichiarante>#AZI_CODFIS_DICHIAR#</iv:CodiceFiscaleDichiarante>
+        <iv:CodiceCarica>#AZI_CARICA_DICHIAR#</iv:CodiceCarica>
+    </iv:Intestazione>
+    <iv:Comunicazione identificativo="00001">
+        <iv:Frontespizio>
+            <iv:CodiceFiscale>#AZI_PIVA#</iv:CodiceFiscale>
+            <iv:AnnoImposta>#PUB_ANNO#</iv:AnnoImposta>
+            <iv:PartitaIVA>#AZI_PIVA#</iv:PartitaIVA>
+            <iv:CFDichiarante>#AZI_CODFIS_DICHIAR#</iv:CFDichiarante>
+            <iv:CodiceCaricaDichiarante>#AZI_CARICA_DICHIAR#</iv:CodiceCaricaDichiarante>
+            <iv:FirmaDichiarazione>#AZI_FIRMA_DICHIAR#</iv:FirmaDichiarazione>
+            <iv:CFIntermediario>#AZI_CODFIS_INTERM#</iv:CFIntermediario>
+            <iv:ImpegnoPresentazione>#AZI_IMPEGNO_CONTR#</iv:ImpegnoPresentazione>
+            <iv:DataImpegno>#DATA_IMPEGNO#</iv:DataImpegno>
+            <iv:FirmaIntermediario>#AZI_FIRMA_INTERM#</iv:FirmaIntermediario>
+            <iv:FlagConferma>#AZI_FLAG_CONFERMA#</iv:FlagConferma>
+        </iv:Frontespizio>
+        <iv:DatiContabili>
+            <iv:Modulo>
+                <iv:NumeroModulo>#AZI_NUM_MODULO#</iv:NumeroModulo>
+                <iv:Trimestre>#AZI_TRIMESTRE#</iv:Trimestre>
+                <iv:TotaleOperazioniAttive>#TOTALE_ATTIVO#</iv:TotaleOperazioniAttive>
+                <iv:TotaleOperazioniPassive>#TOTALE_PASSIVO#</iv:TotaleOperazioniPassive>
+                <iv:IvaEsigibile>#IVA_ESIGIBILE#</iv:IvaEsigibile>
+                <iv:IvaDetratta>#IVA_DETRATTA#</iv:IvaDetratta>
+                <iv:IvaDovuta>#IVA_DOVUTA#</iv:IvaDovuta>#TAG_COMPLETO_IVA_CREDITO#
+				#TAG_DEBITO_PERIODO_PRECEDENTE_INF_25_82#  
+				#TAG_COMPLETO_IVA_CREDITO_PERIODO_PRECEDENTE#
+				#TAG_COMPLETO_IVA_CREDITO_ANNO_PRECEDENTE#
+				#TAG_VERSAMENTI_AUTOUE#
+				#TAG_LIPE_CREDITI_IMPOSTA#
+				#TAG_INTERESSI_DOVUTI#
+				#TAG_METODO#
+				#TAG_ACCONTO#
+				#TAG_COMPLETO_IMPORTO_DA_VERSARE#
+				#TAG_COMPLETO_IMPORTO_IVA_A_CREDITO#
+            </iv:Modulo>
+        </iv:DatiContabili>
+    </iv:Comunicazione>
+</iv:Fornitura>
